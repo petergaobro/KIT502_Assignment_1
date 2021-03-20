@@ -25,7 +25,7 @@
         </aside>
     </div>
 
-<!-- dfggSdSdsd -->
+    <!-- dfggSdSdsd -->
 
 
     <nav class="nav_bar">
@@ -45,7 +45,7 @@
         <div class="nav_links">
             <ul class="list_nav">
                 <li><a class="active_nav" href="./index.html">Home</a></li>
-            <li><a class="active_nav" href="../html/booking.html">Book</a></li>
+                <li><a class="active_nav" href="../html/booking.html">Book</a></li>
                 <li><a class="active_nav" href="">Experiences</a></li>
                 <li><a class="active_nav" href="./login_reg.html">Login</a></li>
                 <li><a href="../html/login_admin.html"><button  id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()" >Admin</button></a></li>
@@ -55,8 +55,8 @@
 
 
 
-            
-            
+
+
 
 
         </div>
@@ -126,9 +126,25 @@
             <!-- search popup window -->
             <div class="search_container" id="search_container">
                 <div class=" booking-form-box ">
-                    <!-- <img src="../img/booking/close.png" alt="Close" class="close"> -->
                     <div class="booking-form ">
-                        <label>Location</label>
+                        <form action="/action_page.php" method="POST">
+                            <label for="gsearch">City:</label>
+                            <input type="search" name="gsearch" id="gsearch">
+                            <input type="submit" value="Search">
+                        </form>
+                        <form>
+                            <label for="checkin">Check in:</label>
+                            <input type="datetime-local" id="checkin" name="checkin">
+                        </form>
+                        <form>
+                            <label for="checkout">Check out:</label>
+                            <input type="datetime-local" id="checkout" name="checkout">
+                        </form>
+                        <form>
+                            <label for="quantity">The number of guests</label>
+                            <input type="number" name="quantity" id="quantity" min="1">
+                        </form>
+                        <!-- <label>Location</label>
                         <input type="text " class="form-control " placeholder="City ">
 
 
@@ -157,12 +173,18 @@
                         </div>
 
                         <div class="input-grp ">
-                            <!-- <a href="" class="close" id="close"></a> -->
                             <button class="btn btn-danger" id="close">Close Me</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
+
+
+
+            <!-- <div class="form"></div> -->
+
+
+
 
         </div>
 
