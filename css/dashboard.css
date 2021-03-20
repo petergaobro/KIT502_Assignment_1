@@ -176,6 +176,9 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 32px;
+}
+
+.dash_card_container ul li {
     cursor: pointer;
 }
 
