@@ -22,3 +22,5 @@ function do_admin() {
     alert("Are you sure go to Dashboard?")
     location.href = "./login_admi.html"
 }
+
+// asdfs
