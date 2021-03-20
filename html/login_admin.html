@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Admin Login</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/home.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/popup_window.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
+    <!-- <script src="https://kit.fontawesome.com/a81368914c.js"></script> -->
+</head>
+
+<body>
+
+    <!---------------part 1-------------------->
+    <!-- <div class="img_area"></div> -->
+    <!-- <div class="covid_div">
+        <aside class="covid_notice">
+            <a class="covid_news" href="https://www.australia.gov.au/">
+                <span class="covid_words">Get the latest on our COVID-19 response</span>
+            </a>
+        </aside>
+    </div> -->
+
+
+    <nav class="nav_bar">
+        <div class="logo">
+            <p>UTas</p>
+            <p>Accommodation</p>
+        </div>
+
+        <a href="#" class="toggle_btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <div class="nav_links">
+            <ul class="list_nav">
+                <li><a class="active_nav" href="./index.html">Home</a></li>
+                <li><a class="active_nav" href="">Rooms</a></li>
+                <li><a class="active_nav" href="">Book</a></li>
+                <li><a class="active_nav" href="">Experiences</a></li>
+                <li><a class="active_nav" href="">Oline Experiences</a></li>
+                <li><a class="login_sign" href="./login_reg.html">Login</a></li>
+                <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
+                <!-- <a href="" class="search_info" id="open">SEARCH NOW</a> -->
+            </ul>
+        </div>
+        <script src="../js/toggle_bar.js" defer></script>
+    </nav>
+
+
+
+
+    <!-- search popup window -->
+    <div class="login_main_container">
+
+        <div class="show_container">
+
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-btn_reg'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <div class="wrapper1">
+                        <div class="menu1">
+                            <select id="name1">
+                                <option value="host1">Host</option>
+                                <option value="system1">System Manager</option>
+                            </select>
+                        </div>
+                        <div class="content1">
+                            <div id="host1" class="data1">
+                                <table>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td><input type="email" class="input-field" placeholder="Email" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Password</td>
+                                        <td><input type="password" class="input-field" placeholder="Enter Password"
+                                                required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ABN</td>
+                                        <td><input type="text" class="input-field" placeholder="ABN" required>
+                                    </tr>
+                                </table>
+                                <input type="checkbox" class="check-box">Remember Password
+                                <button type="submit" value="button" class="submit-btn" onclick="go_dashboard()">Login<a
+                                        href="../html/dashboard.html>"></a></button>
+                            </div>
+                        </div>
+                        <div class="content1">
+                            <div id="system1" class="data1">
+                                <table>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td><input type="email" class="input-field" palceholder="Email" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Password</td>
+                                        <td><input type="password" class="input-field" placeholder="Enter Password"
+                                                required></td>
+                                    </tr>
+                                    <tr>
+                                </table>
+                                <input type="checkbox" class="check-box">Remember Password
+                                <button type="submit" value="button" class="submit-btn" onclick="go_dashboard()">Login<a
+                                        href="../html/dashboard.html>"></a></button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+            <form id='register' class='input-group-register'>
+                <div class="wrapper">
+                    <div class="menu">
+                        <select id="name">
+                            <option value="host">host</option>
+                            <option value="manager">System Manager</option>
+                        </select>
+                    </div>
+                    <div class="content">
+                        <div id="host" class="data">
+                            <table>
+                                <tr>
+                                    <td>First Name</td>
+                                    <td><input type="text" class="input-field" placeholder="First name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Last name</td>
+                                    <td><input type="text" class="input-field" placeholder="Last name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><input type="email" class="input-field" placeholder="Email Id" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td><input type="password" class="input-field" placeholder="Enter password"
+                                            required></td>
+                                </tr>
+                                <tr>
+                                    <td>Confirm Password</td>
+                                    <td><input type="password" class="input-field" placeholder="Confirm password"
+                                            required></td>
+                                </tr>
+                                <tr>
+                                    <td>ABN</td>
+                                    <td><input type="text" class="input-field" placeholder="ABN Number" required></td>
+                                </tr>
+                            </table>
+                            <input type="checkbox" class="check-box" required>I agree to the terms and conditions
+                            <a href="../html/login_admin.html" class="submit-btn">submit</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div id="manager" class="data">
+                            <table>
+                                <tr>
+                                    <td>First Name</td>
+                                    <td><input type="text" class="input-field" placeholder="First name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Last name</td>
+                                    <td><input type="text" class="input-field" placeholder="Last name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><input type="email" class="input-field" placeholder="Email Id" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td><input type="password" class="input-field" placeholder="Enter password"
+                                            required></td>
+                                </tr>
+                                <tr>
+                                    <td>Confirm Password</td>
+                                    <td><input type="password" class="input-field" placeholder="Confirm password"
+                                            required></td>
+                                </tr>
+                            </table>
+                            <input type="checkbox" class="check-box" required>I agree to the terms and conditions
+                            <button type="submit" value="button" class="submit-btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <p>Copyright &copy; , KIT_502 Assignment_1</p>
+    </footer>
+
+
+    <!-- <script src="../js/popup_window.js"></script> -->
+    <script src="../js/log_reg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+    <script>
+        $(Document).ready(function () {
+            $("#name").on('change', function () {
+                $(".data").hide();
+                $("#" + $(this).val()).fadeIn();
+            }).change();
+        });
+    </script>
+    <script>
+        $(Document).ready(function () {
+            $("#name1").on('change', function () {
+                $(".data1").hide();
+                $("#" + $(this).val()).fadeIn();
+            }).change();
+        });
+    </script>
+
+
+    <script src="../js/admin_pop.js"></script>
+
+</body>
+
+</html>
