@@ -45,6 +45,7 @@
 .active_fun {
     height: 40px;
     padding-top: 8px;
+    cursor: pointer;
 }
 
 .sider_bar_menu li {
@@ -175,6 +176,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 32px;
+    cursor: pointer;
 }
 
 .dash_card_container ul li a {
