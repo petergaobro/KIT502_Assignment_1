@@ -127,28 +127,52 @@
             <div class="search_container" id="search_container">
                 <div class=" booking-form-box ">
                     <div class="booking-form ">
-                        <form action="/action_page.php" method="POST">
-                            <label for="gsearch">City:</label>
-                            <input type="search" name="gsearch" id="gsearch">
-                            <input type="submit" value="Search">
-                        </form>
+                        <!-- <form action="/action_page.php" method="POST"> -->
                         <form>
-                            <label for="checkin">Check in:</label>
+                            <label for="gsearch"><h5>City:</h5></label><br>
+                            <select name="city" id="city">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select><br>
+
+
+                            <label for="checkin"><h5>Check in:</h5></label>
                             <input type="datetime-local" id="checkin" name="checkin">
-                        </form>
-                        <form>
-                            <label for="checkout">Check out:</label>
+
+
+                            <label for="checkout"><h5>Check out:</h5></label>
                             <input type="datetime-local" id="checkout" name="checkout">
+
+                            <label for="quantity"><h5>Guests number:</h5></label>
+                            <input type="number" name="quantity" id="quantity" min="1">
+
+
+                            <button class="btn btn-danger" id="close">Close Me</button>
+                        </form>
+
+                        <!-- <input type="submit" value="Submit"> -->
+
+
+
+
+
+
+
+                        <!-- <input type="search" name="gsearch" id="gsearch">
+                            <input type="submit" value="Search"> -->
+                        <!-- </form>
+                        <form>
+
                         </form>
                         <form>
-                            <label for="quantity">Adult</label>
-                            <input type="number" name="quantity" id="quantity" min="1">
+
                         </form>
                         <form>
-                            <label for="quantity">Children</label>
-                            <input type="number" name="quantity" id="quantity" min="1">
-                        </form>
-                        <button class="btn btn-danger" id="close">Close Me</button>
+
+                        </form> -->
+
                         <!-- <label>Location</label>
                         <input type="text " class="form-control " placeholder="City ">
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 .search_container {
     position: absolute;
     /* background: rgba(0, 0, 0, 0.9); */
@@ -19,14 +20,47 @@
     opacity: 1;
 }
 
+.search_container h2 {
+    font-family: 'Boogaloo', cursive;
+}
+
+.search_container #city {
+    height: 50px;
+    font-family: 'Boogaloo', cursive;
+    font-size: 20px;
+    width: 100%;
+    padding: 5px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=datetime-local],
+input[type=number] {
+    width: 100%;
+    padding: 5px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 .booking-form-box {
-    max-width: 350px;
-    border: 1px solid #ced4da;
-    margin: 10% auto 0;
+    max-width: 500px;
+    height: 500px;
+    /* max-height: 500px; */
+    /* border: 1px solid #ced4da; */
+    margin-top: 20px;
+    background: wheat;
 }
 
 .booking-form {
-    padding: 0 20px 20px;
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 20px;
 }
 
 .booking-form label {
