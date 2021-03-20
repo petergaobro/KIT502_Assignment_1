@@ -141,7 +141,11 @@
                             <input type="datetime-local" id="checkout" name="checkout">
                         </form>
                         <form>
-                            <label for="quantity">The number of guests</label>
+                            <label for="quantity">Adult</label>
+                            <input type="number" name="quantity" id="quantity" min="1">
+                        </form>
+                        <form>
+                            <label for="quantity">Children</label>
                             <input type="number" name="quantity" id="quantity" min="1">
                         </form>
                         <button class="btn btn-danger" id="close">Close Me</button>
