@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>KIT_502_web_dev</title>
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="../css/popup_window.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
+    <!-- <script src="https://kit.fontawesome.com/a81368914c.js"></script> -->
+</head>
+
+<body>
+    <!-- <div class="content"> -->
+    <!-- <div class="nav-bar">
+			<p>hello peter</p>
+		</div> -->
+
+    <!---------------part 1-------------------->
+    <div class="covid_div">
+        <aside class="covid_notice">
+            <a class="covid_news" href="https://www.australia.gov.au/">
+                <span class="covid_words">Get the latest on our COVID-19 response</span>
+            </a>
+        </aside>
+    </div>
+
+    <!-- head container -->
+    <!-- font-family:monoton,fantasy; -->
+
+
+    <nav class="nav_bar">
+        <!-- <div class="logo_container">
+			<img src="img/logo/Logo.png" alt="">
+		</div> -->
+        <div class="logo">
+            <p>UTas</p>
+            <p>Accommodation</p>
+        </div>
+        <!-- <a href="index.html" class="logo">
+			<img src="img/logo/Logo.png" alt="">
+		</a> -->
+        <!-- <label class="logo" >UTAS ACCOMMODATION</label> -->
+        <!-- <a href="#" class="toggle_btn">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a> -->
+
+        <a href="#" class="toggle_btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <div class="nav_links">
+            <ul class="list_nav">
+                <li><a class="active_nav" href="./index.html">Home</a></li>
+                <li><a class="active_nav" href="">Book</a></li>
+                <li><a class="active_nav" href="">Experiences</a></li>
+                <li><a class="active_nav" href="./login_reg.html">Login</a></li>
+                <li><a class="active_nav" href="./login_reg.html">Login</a></li>
+                <!-- <li><a class="active_nav" onclick="do_admin">Admin</a></li> -->
+                <li><a><button onclick="do_admin()" id="open_admin" type="button" class="btn btn-dark">Admin</button></a></li>
+                <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li>
+                <!-- <a href="" class="search_info" id="open">SEARCH NOW</a> -->
+            </ul>
+        </div>
+
+        <!-- <div class="sbtn">
+			<a><button id="open" type="button" class="btn btn-info">Search Now</button></a>
+		</div> -->
+        <!-- <div class="login_container">
+			<a href="">Login</a>
+		</div> -->
+        <script src="../js/toggle_bar.js" defer></script>
+    </nav>
+
+
+    <!-- <div class="nav_bar">
+		<img class="logo" src="img/logo/Logo.png" alt="">
+		<nav class="nav_w">
+			
+			<ul class="list_nav">
+				<li><a class="active_nav" href="">Home</a></li>
+				<li><a class="active_nav" href="">Rooms</a></li>
+				<li><a class="active_nav" href="">Book</a></li>
+				<li><a class="active_nav" href="">Experiences</a></li>
+				<li><a class="active_nav" href="">Oline Experiences</a></li>
+			</ul>
+		</nav>
+		<div class="login_container">
+			<a href=""><img src="img/login/login.png" alt=""></a>
+		</div>
+	</div> -->
+
+    <!-- <img src="img/login/login.jpeg" alt="">< -->
+
+
+
+
+    <!---------------part 2-------------------->
+    <div class="gallery_container">
+
+        <!-- button bookmore -->
+
+
+        <div class="slide_show_container">
+
+
+
+
+
+            <div onclick="push_slides(-1)" class="radio_btn arrow_prev">
+                <span class="arrow prev_arrow"></span>
+            </div>
+            <div onclick="push_slides(1)" class="radio_btn arrow_next">
+                <span class="arrow next_arrow"></span>
+            </div>
+            <!-- gallery text bar -->
+            <div class="text_container">
+                <p class="text_form slideTextFromTop"></p>
+            </div>
+            <div class="img_container" id="first">
+                <img src="../img/gallery/hotel_1.jpeg">
+                <p class="text_form">Gallery one</p>
+            </div>
+            <div class="img_container">
+                <img src="../img/gallery/hotel_2.jpg">
+                <p class="text_form">Gallery two</p>
+            </div>
+            <div class="img_container">
+                <img src="../img/gallery/hotel_3.jpg">
+                <p class="text_form">Gallery three</p>
+            </div>
+            <div class="img_container">
+                <img src="../img/gallery/hotel_4.jpg">
+                <p class="text_form">Gallery four</p>
+            </div>
+            <div class="img_container">
+                <img src="../img/gallery/hotel_5.jpg">
+                <p class="text_form">Gallery five</p>
+            </div>
+
+
+            <div class="more_info">
+                <a class="explore_btn" href="">BOOKING NOW</a>
+                <!-- <a href=""><button id="open" >Search Now</button></a> -->
+                <!-- <script type="javascript" src=""></script> -->
+                <!-- <a href="" class="search_info" id="open">SEARCH NOW</a> -->
+                <!-- <button id="explore">EXPLORE NOW</button> -->
+                <!-- <button id="open">Search Now</button> -->
+                <!-- <button id="open" type="button" class="btn btn-info">Search Now</button> -->
+
+            </div>
+
+            <!-- search popup window -->
+            <div class="search_container" id="search_container">
+                <div class=" booking-form-box ">
+                    <!-- <img src="../img/booking/close.png" alt="Close" class="close"> -->
+                    <div class="booking-form ">
+                        <label>Location</label>
+                        <input type="text " class="form-control " placeholder="City ">
+
+
+                        <div class="input-grp ">
+                            <label>Check in</label>
+                            <input type="date " class="form-control select-data ">
+                        </div>
+
+                        <div class="input-grp ">
+                            <label>Check Out</label>
+                            <input type="date " class="form-control select-data ">
+                        </div>
+
+                        <div class="input-grp ">
+                            <label>Adults</label>
+                            <input type="number " class="form-control " value="1 ">
+                        </div>
+
+                        <div class="input-grp ">
+                            <label>Children</label>
+                            <input type="number " class="form-control " value="0 ">
+                        </div>
+
+                        <div class="input-grp ">
+                            <button type="button " class="btn btn-success flight ">Show Room</button>
+                        </div>
+
+                        <div class="input-grp ">
+                            <!-- <a href="" class="close" id="close"></a> -->
+                            <button class="btn btn-danger" id="close">Close Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="dots_container"></div>
+    </div>
+    <!-- <script type="text/javascript" src="js/myScript.js"></script> -->
+
+
+    <!-- seperate line part -->
+    <div class="seperate_line"></div>
+
+
+    <!-- <div class="tem">
+        <img src="../img/background/background_img.jpg" alt="">
+    </div> -->
+
+    <!--------------footer_part------------------->
+
+    <div class="footer_container">
+        <div class="about_us">
+            <h2>About us</h2>
+            <p>Our goal is to engage our guests and provide them with the best experience through harmonious, zealous and personable service in the most convenient, comfortable, intimate and welcoming setting.</p>
+        </div>
+
+        <div class="social_main">
+            <div class="social_container">
+                <li>
+                    <a href=""><img src="../img/footer_social/fb.png" alt=""></a>
+                </li>
+            </div>
+            <div class="social_container">
+                <li>
+                    <a href=""><img src="../img/footer_social/ins.png" alt=""></a>
+                </li>
+            </div>
+            <div class="social_container">
+                <li>
+                    <a href=""><img src="../img/footer_social/twitter.webp" alt=""></a>
+                </li>
+            </div>
+            <div class="social_container">
+                <li>
+                    <a href=""><img src="../img/footer_social/youtube.jpeg" alt=""></a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; , KIT_502 Assignment_1</p>
+    </footer>
+
+    <!-- <ul class="social">
+            <li><a href=""><img src="img/footer_social/fb.png" alt=""></a></li>
+            <li><a href=""><img src="img/footer_social/ins.png" alt=""></a></li>
+            <li><a href=""><img src="img/footer_social/twitter.webp" alt=""></a></li>
+            <li><a href=""><img src="img/footer_social/youtube.jpeg" alt=""></a></li>
+        </ul> -->
+
+
+
+    <!-- js files -->
+    <script src="../js/home.js"></script>
+    <script src="../js/search_pop.js"></script>
+    <script src="../js/admin_pop.js"></script>
+</body>
+
+</html>
