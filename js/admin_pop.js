@@ -18,9 +18,15 @@
 
 // let result = prompt("Are you sure go to Dashboard?");
 // console.log(result);
-function do_admin() {
-    alert("Are you sure go to Dashboard?")
-    location.href = "./login_admi.html"
+
+
+
+function do_admin_login() {
+    alert("Are you sure go to login/reg page?")
+    location.href = "./login_admin.html"
 }
 
-// asdfs
+function go_dashboard() {
+    alert("Are you sure go to Dashboard?")
+    location.href = "./dashboard.html"
+}

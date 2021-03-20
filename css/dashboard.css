@@ -1,0 +1,266 @@
+/* import font google css API */
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+
+/* :root{
+    --main-color: #fff
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.db_sider {
+    width: 350px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #191970;
+}
+
+.db_brand {
+    height: 100px;
+    padding: 16px 10px 15px 45px;
+    color: #fff;
+}
+
+.db_brand span {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.sider_bar_menu {
+    margin-top: 16px;
+}
+
+.active_fun {
+    height: 40px;
+    padding-top: 8px;
+}
+
+.sider_bar_menu li {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 32px;
+    margin-bottom: 32px;
+}
+
+.sider_bar_menu a {
+    padding-left: 16px;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.sider_bar_menu ul li a:hover {
+    background: #fff;
+    color: #191970;
+    border-radius: 30px 0px 0px 30px;
+}
+
+
+/* 
+.dash_card_container ul li a{
+    color: #191970;
+} */
+
+
+/* .dash_card_container ul li:hover{
+
+    background: #191970;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.dash_card_container ul li a:hover{
+    color: #fff;
+}
+ */
+
+
+/* responsive */
+
+.sider_bar_menu a span:first-child {
+    font-size: 20px;
+    padding-right: 16px;
+    /* line-height: 10px; */
+}
+
+.main_container {
+    margin-left: 350px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 25px;
+    box-shadow: 2px 2px 15px #888888;
+    /* position: fixed; */
+    /* left: 350px; */
+    /* width: calc(100%-350px); */
+}
+
+header h2 {
+    color: #222;
+}
+
+header label span {
+    font-size: 25px;
+    padding-right: 16px;
+}
+
+.search_bar {
+    border: 2px solid #191970;
+    border-radius: 30px 30px 30px 30px;
+    height: 40px;
+    /* width: 40px; */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.search_bar span {
+    display: inline-block;
+    padding: 0px 8px;
+    font-size: 20px;
+}
+
+.search_bar input {
+    height: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.user_bar {
+    display: flex;
+    align-items: center;
+}
+
+.user_bar img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.user_bar h6 {
+    display: inline-block;
+    color: #191970;
+    /* margin-top: -1px !important; */
+}
+
+
+/* .user_bar h3{
+    margin-bottom: 0 im !important;
+} */
+
+main {
+    /* margin-top: 90px; */
+    padding: 32px 24px;
+    background: rgb(238, 235, 230);
+    min-height: 100vh;
+}
+
+.dash_card_container ul {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+}
+
+.dash_card_container ul li a {
+    color: #191970;
+}
+
+.dash_card_container ul li:hover {
+    background: #191970;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.dash_card_container ul li a:hover {
+    color: #fff;
+}
+
+.dash_card {
+    border: 1px solid #191970;
+    display: flex;
+    justify-content: space-between;
+    /* background: #fff; */
+    padding: 30px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+/* .dash_card div:last-child span{
+    font-size: 32px;
+    color: #191970;
+}
+.dash_card div:first-child span{
+    color: #888888;
+}
+
+.dash_card:last-child{
+    background: #191970;
+}
+
+.dash_card:last-child h1,
+.dash_card:last-child div:first-child span,
+.dash_card:last-child div:last-child span
+{
+    color: #fff;
+} */
+
+#customer_content,
+#order_content,
+#inventory_content,
+#account_content,
+#q_n_a_content {
+    color: #fff;
+    margin-top: 20px;
+    background: #888888;
+    width: 100%;
+    height: 20px;
+    display: none;
+}
+
+
+/* #order_content {
+    margin-top: 20px;
+    background: #888888;
+    width: 100%;
+    height: 20px;
+    display: none;
+}
+
+#inventory_content {
+    margin-top: 20px;
+    background: #888888;
+    width: 100%;
+    height: 20px;
+    display: none;
+}
+
+#account_content {
+    margin-top: 20px;
+    background: #888888;
+    width: 100%;
+    height: 20px;
+    display: none;
+}
+
+#q_n_a_content {
+    margin-top: 20px;
+    background: #ac8181;
+    width: 100%;
+    height: 20px;
+    display: none;
+} */
