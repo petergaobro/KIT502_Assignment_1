@@ -116,6 +116,35 @@ body {
     transition: 1s;
 }
 
+.sub_user {
+    display: none;
+    width: 150px;
+    /* width: auto; */
+}
+
+.nav_links ul li:hover .sub_user {
+    display: block;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: -15px;
+    backdrop-filter: blur(60px);
+    background: rgba(53, 50, 50, 0.5);
+}
+
+.nav_links ul li:hover .sub_user ul {
+    display: block;
+    margin: 20px;
+}
+
+.nav_links ul li:hover .sub_user ul li {
+    width: 100px;
+    /* padding: 2px; */
+    /* border: 1px dotted #fff; */
+    background: transparent;
+    border-radius: 30%;
+    text-align: center;
+}
+
 
 /* .login_sign a {
     padding: 5px;

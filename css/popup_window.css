@@ -11,6 +11,8 @@
     align-items: center;
     opacity: 0;
     pointer-events: none;
+    backdrop-filter: blur(50px);
+    background: rgba(56, 52, 52, 0.5);
     /* transition: opacity 0.4s;  */
     /* text-align: center; */
 }

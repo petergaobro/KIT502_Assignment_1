@@ -42,13 +42,20 @@
         <div class="nav_links">
             <ul class="list_nav">
                 <li><a class="active_nav" href="./index.html">Home</a></li>
-                <li><a class="active_nav" href="">Rooms</a></li>
                 <li><a class="active_nav" href="">Book</a></li>
-                <li><a class="active_nav" href="">Experiences</a></li>
-                <li><a class="active_nav" href="">Oline Experiences</a></li>
-                <li><a class="login_sign" href="./login_reg.html">Login</a></li>
-                <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
-                <!-- <a href="" class="search_info" id="open">SEARCH NOW</a> -->
+                <li><a class="active_nav" href="#">Customer</a>
+
+                    <div class="sub_user">
+                        <ul>
+                            <li><a href="../html/login_reg.html">Login</a></li>
+                            <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li>
+                            <li><a href="../html/client_review.html">Review</a></li>
+                            <li><a href="../html/rate.html">Rate</a></li>
+                        </ul>
+                    </div>
+                    <li><a class="login_sign" href="./login_reg.html">Login</a></li>
+                    <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
+                    <!-- <a href="" class="search_info" id="open">SEARCH NOW</a> -->
             </ul>
         </div>
         <script src="../js/toggle_bar.js" defer></script>
@@ -85,13 +92,13 @@
                     <input type="password" class="input-field" placeholder="*confirm password" required>
                     <input type="checkbox" class="check-box" required>I agree to the terms and conditions
                     <button type='submit' class='submit-btn'>Submit</button>
-                    </div>
-                </div>
-            
-
-
-            
+            </div>
         </div>
+
+
+
+
+
     </div>
 
 
@@ -99,7 +106,7 @@
 
 
 
-    
+
 
 
     <footer>
@@ -109,6 +116,7 @@
 
     <!-- <script src="../js/popup_window.js"></script> -->
     <script src="../js/log_reg.js"></script>
+    <script src="../js/admin_pop.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <!-- <script src="../js/option.js"></script> -->
 
@@ -120,8 +128,8 @@
             }).change();
         });
     </script> -->
-    
-    
+
+
 
 
 

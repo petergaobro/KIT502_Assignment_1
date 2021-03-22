@@ -19,6 +19,10 @@
 // let result = prompt("Are you sure go to Dashboard?");
 // console.log(result);
 
+function do_logout() {
+    alert("Are you sure want to logout?")
+    location.href = "./login_reg.html"
+}
 
 
 function do_admin_login() {

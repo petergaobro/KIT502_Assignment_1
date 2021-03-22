@@ -226,8 +226,9 @@ main {
 
 #customer_content,
 #order_content,
-#inventory_content,
-#account_content,
+#accommodation_content,
+#review_content,
+#host_content,
 #q_n_a_content {
     color: #fff;
     margin-top: 20px;
@@ -269,3 +270,37 @@ main {
     height: 20px;
     display: none;
 } */
+
+table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    color: #333;
+}
+
+#review_table,
+#host_table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+#review_table,
+#host_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+#review_table,
+#host_table tr th {
+    background-color: black;
+    color: white;
+}

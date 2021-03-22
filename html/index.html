@@ -46,8 +46,22 @@
             <ul class="list_nav">
                 <li><a class="active_nav" href="./index.html">Home</a></li>
                 <li><a class="active_nav" href="../html/booking.html">Book</a></li>
-                <li><a class="active_nav" href="">Experiences</a></li>
-                <li><a class="active_nav" href="./login_reg.html">Login</a></li>
+                <!-- <li><a class="active_nav" href="">Experiences</a></li> -->
+                <li><a class="active_nav" href="#">Customer</a>
+
+                    <div class="sub_user">
+                        <ul>
+                            <li><a href="../html/login_reg.html">Login</a></li>
+                            <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li>
+                            <li><a href="../html/client_review.html">Review</a></li>
+                            <li><a href="../html/rate.html">Rate</a></li>
+                        </ul>
+                    </div>
+
+
+                </li>
+
+
                 <li><a href="../html/login_admin.html"><button  id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()" >Admin</button></a></li>
                 <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li>
             </ul>

@@ -46,14 +46,19 @@
 
                 <li>
                     <a class="active_fun" onclick="inventory_tab()"><span class="las la-receipt"></span>
-                    <span>Inventory</span></a>
+                    <span>Accommodation</span></a>
                 </li>
 
                 <li>
                     <a class="active_fun" onclick="account_tab()"><span class="las la-user-circle"></span>
-                    <span>Accounts</span></a>
+                    <span>Reviews</span></a>
                 </li>
 
+
+                <li>
+                    <a class="active_fun" onclick="host_tab()"><span class="las la-igloo"></span>
+                    <span>Q&A</span></a>
+                </li>
                 <li>
                     <a class="active_fun" onclick="q_n_a_tab()"><span class="las la-igloo"></span>
                     <span>Q&A</span></a>
@@ -128,7 +133,7 @@
                             <div class="dash_card">
                                 <div>
                                     <h1>10</h1>
-                                    <span>Inventory</span>
+                                    <span>Accommodation</span>
                                 </div>
                                 <div>
                                     <span class="las la-receipt"></span>
@@ -142,10 +147,24 @@
                             <div class="dash_card">
                                 <div>
                                     <h1>10K</h1>
-                                    <span>Accounts</span>
+                                    <span>Reviews</span>
                                 </div>
                                 <div>
                                     <span class="las la-user-circle"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="active_card">
+                        <a onclick="host_tab()">
+                            <div class="dash_card">
+                                <div>
+                                    <h1>10</h1>
+                                    <span>Host</span>
+                                </div>
+                                <div>
+                                    <span class="las la-address-book"></span>
                                 </div>
                             </div>
                         </a>
@@ -161,6 +180,10 @@
                                 <div>
                                     <span class="las la-question-circle"></span>
                                 </div>
+
+                                <!-- <i class="las la-address-book"></i> -->
+                                <!-- <i class="far fa-address-book"></i> -->
+
                             </div>
                         </a>
                     </li>
@@ -169,19 +192,101 @@
 
             <!-- tab content -->
             <div class="tab" id="customer_content">
-                welcome to customer page
+                <table id="review_table">
+                    <tr>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>2342@gmail.com</td>
+                        <td>John</td>
+                        <td>Snow</td>
+                        <td>0426888888</td>
+                        <td><button onclick="delete_op()" id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>peter@gmail.com</td>
+                        <td>Tony</td>
+                        <td>Stark</td>
+                        <td>0456879089</td>
+                        <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>monkey@utas.edu.au</td>
+                        <td>Spider</td>
+                        <td>Man</td>
+                        <td>0468666666</td>
+                        <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>jiayin@utas.edu.au</td>
+                        <td>Scarlet</td>
+                        <td>Witch</td>
+                        <td>0834890090</td>
+                        <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+
+
+                </table>
             </div>
 
             <div class="tab" id="order_content">
                 welcome to order page
             </div>
 
-            <div class="tab" id="inventory_content">
-                welcome to inventory page
+            <div class="tab" id="accommodation_content">
+                welcome to Accommodation page
             </div>
 
-            <div class="tab" id="account_content">
-                welcome to account page
+            <div class="tab" id="review_content">
+                welcome to review page
+            </div>
+
+            <div class="tab" id="host_content">
+                <table id="host_table">
+                    <tr>
+                        <th>Email</th>
+                        <th>Location</th>
+                        <th>ABN</th>
+                        <th>Phone Number</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>2342@gmail.com</td>
+                        <td>MEL</td>
+                        <td>12345678902</td>
+                        <td>0426888888</td>
+                        <td><button onclick="delete_host()" id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>peter@gmail.com</td>
+                        <td>SYN</td>
+                        <td>12345678934</td>
+                        <td>0456879089</td>
+                        <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>monkey@utas.edu.au</td>
+                        <td>Hobart</td>
+                        <td>12345678936</td>
+                        <td>0468666666</td>
+                        <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>jiayin@utas.edu.au</td>
+                        <td>Adelaide</td>
+                        <td>12345678456</td>
+                        <td>0834890090</td>
+                        <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+                    </tr>
+
+
+                </table>
             </div>
 
             <div class="tab" id="q_n_a_content">
@@ -192,6 +297,7 @@
     </div>
 
     <script src="../js/dashboard.js"></script>
+    <script src="../js/CRUD.js"></script>
 </body>
 
 </html>

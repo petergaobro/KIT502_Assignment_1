@@ -9,6 +9,7 @@
 } */
 
 body {
+    /* background: wheat; */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background/background_img.jpg);
     background-size: cover;
     background-position: center;
@@ -87,6 +88,35 @@ body {
     background-color: rgb(0, 0, 0);
     color: #fff;
     transition: 1s;
+}
+
+.sub_user {
+    display: none;
+    width: 150px;
+    /* width: auto; */
+}
+
+.nav_links ul li:hover .sub_user {
+    display: block;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: -15px;
+    backdrop-filter: blur(60px);
+    background: rgba(53, 50, 50, 0.5);
+}
+
+.nav_links ul li:hover .sub_user ul {
+    display: block;
+    margin: 20px;
+}
+
+.nav_links ul li:hover .sub_user ul li {
+    width: 100px;
+    /* padding: 2px; */
+    /* border: 1px dotted #fff; */
+    background: transparent;
+    border-radius: 30%;
+    text-align: center;
 }
 
 
@@ -269,26 +299,32 @@ span {
     color: white;
     font-size: 15;
 }
-.content{
+
+.content {
     margin: 15px 0;
 }
-.data{
+
+.data {
     display: none;
     color: aqua;
 }
-.wrapper{
+
+.wrapper {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.data1{
+
+.data1 {
     display: none;
-    color:aqua;
+    color: aqua;
 }
-.content1{
+
+.content1 {
     margin: 15px 0;
 }
-.wrapper1{
+
+.wrapper1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
