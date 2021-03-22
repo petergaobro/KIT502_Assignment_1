@@ -289,18 +289,25 @@ td {
     color: #333;
 }
 
-#review_table,
-#host_table tr:nth-child(even) {
+#review_table tr,
+#host_table tr,
+#host_add_table tr:nth-child(even) {
     background-color: #eee;
 }
 
 #review_table,
-#host_table tr:nth-child(odd) {
+#host_table,
+#host_add_table tr:nth-child(odd) {
     background-color: #fff;
 }
 
-#review_table,
-#host_table tr th {
-    background-color: black;
+#review_table tr th,
+#host_table tr th,
+#host_add_table tr th {
+    background-color: rgb(146, 39, 39);
     color: white;
+}
+
+#host_add_table {
+    margin-top: 2rem;
 }
