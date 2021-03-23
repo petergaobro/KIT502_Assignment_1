@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
 
 /* :root{
-    --main-color: #fff
+--main-color: #fff
 } */
 
 * {
@@ -72,20 +72,20 @@
 
 /* 
 .dash_card_container ul li a{
-    color: #191970;
+color: #191970;
 } */
 
 
 /* .dash_card_container ul li:hover{
 
-    background: #191970;
-    border-radius: 10px 10px 10px 10px;
+background: #191970;
+border-radius: 10px 10px 10px 10px;
 }
 
 .dash_card_container ul li a:hover{
-    color: #fff;
+color: #fff;
 }
- */
+*/
 
 
 /* responsive */
@@ -161,13 +161,13 @@ header label span {
 
 
 /* .user_bar h3{
-    margin-bottom: 0 im !important;
+margin-bottom: 0 im !important;
 } */
 
 main {
     /* margin-top: 90px; */
     padding: 32px 24px;
-    background: rgb(238, 235, 230);
+    /* background: rgb(238, 235, 230); */
     min-height: 100vh;
 }
 
@@ -206,22 +206,22 @@ main {
 
 
 /* .dash_card div:last-child span{
-    font-size: 32px;
-    color: #191970;
+font-size: 32px;
+color: #191970;
 }
 .dash_card div:first-child span{
-    color: #888888;
+color: #888888;
 }
 
 .dash_card:last-child{
-    background: #191970;
+background: #191970;
 }
 
 .dash_card:last-child h1,
 .dash_card:last-child div:first-child span,
 .dash_card:last-child div:last-child span
 {
-    color: #fff;
+color: #fff;
 } */
 
 #customer_content,
@@ -232,7 +232,7 @@ main {
 #q_n_a_content {
     color: #fff;
     margin-top: 20px;
-    background: #888888;
+    /* background: #888888; */
     width: 100%;
     height: 20px;
     display: none;
@@ -240,36 +240,85 @@ main {
 
 
 /* #order_content {
-    margin-top: 20px;
-    background: #888888;
-    width: 100%;
-    height: 20px;
-    display: none;
+margin-top: 20px;
+background: #888888;
+width: 100%;
+height: 20px;
+display: none;
 }
 
 #inventory_content {
-    margin-top: 20px;
-    background: #888888;
-    width: 100%;
-    height: 20px;
-    display: none;
+margin-top: 20px;
+background: #888888;
+width: 100%;
+height: 20px;
+display: none;
 }
 
 #account_content {
-    margin-top: 20px;
-    background: #888888;
-    width: 100%;
-    height: 20px;
-    display: none;
+margin-top: 20px;
+background: #888888;
+width: 100%;
+height: 20px;
+display: none;
 }
 
 #q_n_a_content {
-    margin-top: 20px;
-    background: #ac8181;
-    width: 100%;
-    height: 20px;
-    display: none;
+margin-top: 20px;
+background: #ac8181;
+width: 100%;
+height: 20px;
+display: none;
 } */
+
+.edit_form {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 20px;
+    /* text-align: center; */
+}
+
+.tab {
+    float: left;
+    margin-top: 40px;
+}
+
+.tab_create {
+    margin-bottom: 50px;
+    color: #191970;
+}
+
+.tab_create input {
+    display: block;
+    margin-bottom: 10px
+}
+
+#edit_btn {
+    margin-left: 65px;
+}
+
+
+/* tr {
+    transition: all .25s ease-in-out
+}
+
+tr:hover {
+    background-color: #EEE;
+    cursor: pointer
+} */
+
+input::placeholder {
+    color: #222 !important;
+}
+
+tr {
+    transition: all .25s ease-in-out
+}
+
+tr:hover {
+    background-color: #EEE;
+    cursor: pointer
+}
 
 table {
     width: 100%;
@@ -292,7 +341,7 @@ td {
 #review_table tr,
 #host_table tr,
 #host_add_table tr:nth-child(even) {
-    background-color: #eee;
+    background-color: #fff;
 }
 
 #review_table,
@@ -304,10 +353,42 @@ td {
 #review_table tr th,
 #host_table tr th,
 #host_add_table tr th {
-    background-color: rgb(146, 39, 39);
+    background-color: rgba(25, 25, 112, 0.5);
     color: white;
 }
 
 #host_add_table {
     margin-top: 2rem;
+}
+
+#host_table {
+    margin-top: 2rem;
+}
+
+
+/* host table shadow */
+
+#host_table #host_shadow {
+    transition: all .25s ease-in-out;
+}
+
+#host_table #host_shadow:hover {
+    background-color: wheat;
+    cursor: pointer;
+}
+
+
+/* add host table shadow */
+
+#host_add_table #host_shadow {
+    transition: all .25s ease-in-out;
+}
+
+#host_add_table #host_add_shadow:hover {
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.de_add_btn {
+    text-align: center;
 }
