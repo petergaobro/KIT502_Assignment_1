@@ -325,6 +325,11 @@ body {
         padding-right: 20px;
     }
 }
+.ui-datepicker{
+    background:#333;
+    color: rgb(235, 158, 16);
+    font-size: auto;
+}
 
 /* room */
 

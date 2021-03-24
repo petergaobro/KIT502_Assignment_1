@@ -1,6 +1,6 @@
-var x = document.getElementById('login');
-var y = document.getElementById('register');
-var z = document.getElementById('btn');
+var x = document.getElementById('login_form');
+var y = document.getElementById('reg_form');
+var z = document.getElementById('switch_btn');
 
 function register() {
     x.style.left = '-400px';
