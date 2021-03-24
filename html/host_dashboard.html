@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="../css/dashboard.css" />
-    <link rel="stylesheet" href="../css/host_dashboard.css" />
 
     <title>UTas Dashboard</title>
 
@@ -37,32 +36,32 @@
 
                 <li>
                     <a class="active_fun" onclick="customer_tab()"><span class="las la-users"></span>
-                    <span>Customers</span></a>
-                </li>
-
-                <li>
-                    <a class="active_fun" onclick="order_tab()"><span class="las la-shopping-bag"></span>
                     <span>Orders</span></a>
                 </li>
 
                 <li>
+                    <a class="active_fun" onclick="order_tab()"><span class="las la-shopping-bag"></span>
+                    <span>Rates</span></a>
+                </li>
+
+                <li>
                     <a class="active_fun" onclick="inventory_tab()"><span class="las la-receipt"></span>
-                    <span>Accommodation</span></a>
+                    <span>N/A</span></a>
                 </li>
 
                 <li>
                     <a class="active_fun" onclick="account_tab()"><span class="las la-user-circle"></span>
-                    <span>Reviews</span></a>
+                    <span>N/A</span></a>
                 </li>
 
 
                 <li>
                     <a class="active_fun" onclick="host_tab()"><span class="las la-igloo"></span>
-                    <span>Host</span></a>
+                    <span>N/A</span></a>
                 </li>
                 <li>
                     <a class="active_fun" onclick="q_n_a_tab()"><span class="las la-igloo"></span>
-                    <span>Q&A</span></a>
+                    <span>N/A</span></a>
                 </li>
 
                 <li>
@@ -90,7 +89,7 @@
                 <img src="../img/dashboard/user_icon.webp" alt="">
                 <div>
                     <h3>Peter Gao</h3>
-                    <h6>System manager</h6>
+                    <h6>Host</h6>
                 </div>
             </div>
 
@@ -101,11 +100,11 @@
             <div class="dash_card_container">
                 <ul>
                     <li class="active_card">
-                        <a onclick="customer_tab()">
+                        <a onclick="order_tab()">
                             <div class="dash_card">
                                 <div>
                                     <h1>10</h1>
-                                    <span>Customers</span>
+                                    <span>Orders</span>
                                 </div>
                                 <div>
                                     <span class="las la-users"></span>
@@ -116,11 +115,11 @@
 
 
                     <li class="active_card">
-                        <a onclick="order_tab()">
+                        <a onclick="rate_tab()">
                             <div class="dash_card">
                                 <div>
                                     <h1>10</h1>
-                                    <span>Orders</span>
+                                    <span>Rates</span>
                                 </div>
                                 <div>
                                     <span class="las la-shopping-bag"></span>
@@ -133,8 +132,8 @@
                         <a onclick="inventory_tab()">
                             <div class="dash_card">
                                 <div>
-                                    <h1>10</h1>
-                                    <span>Accommodation</span>
+                                    <h1>N/A</h1>
+                                    <span>N/A</span>
                                 </div>
                                 <div>
                                     <span class="las la-receipt"></span>
@@ -147,8 +146,8 @@
                         <a onclick="account_tab()">
                             <div class="dash_card">
                                 <div>
-                                    <h1>10K</h1>
-                                    <span>Reviews</span>
+                                    <h1>N/A</h1>
+                                    <span>N/A</span>
                                 </div>
                                 <div>
                                     <span class="las la-user-circle"></span>
@@ -161,8 +160,8 @@
                         <a onclick="host_tab()">
                             <div class="dash_card">
                                 <div>
-                                    <h1>10</h1>
-                                    <span>Host</span>
+                                    <h1>N/A</h1>
+                                    <span>N/A</span>
                                 </div>
                                 <div>
                                     <span class="las la-address-book"></span>
@@ -175,15 +174,12 @@
                         <a onclick="q_n_a_tab()">
                             <div class="dash_card">
                                 <div>
-                                    <h1>Question?</h1>
-                                    <span>Q&A</span>
+                                    <h1>N/A</h1>
+                                    <span>N/A</span>
                                 </div>
                                 <div>
                                     <span class="las la-question-circle"></span>
                                 </div>
-
-                                <!-- <i class="las la-address-book"></i> -->
-                                <!-- <i class="far fa-address-book"></i> -->
 
                             </div>
                         </a>
@@ -192,84 +188,6 @@
             </div>
 
             <!-- tab content -->
-            <div class="tab" id="customer_content">
-                <div class="tab tab_create">
-                    <td>
-                        First name :<input type="fname" name="edit_c_fname" id="edit_c_fname">
-                    </td>
-                    <td>
-                        Last name :<input type="lname" name="edit_c_lname" id="edit_c_lname">
-                    </td>
-                    <td>
-                        Email :<input type="email" name="edit_c_email" id="edit_c_email">
-                    </td>
-
-                    <td>
-                        Address :<input type="text" name="edit_c_add" id="edit_c_add">
-                    </td>
-
-                    <td>
-                        Phone number :<input type="text" name="edit_c_pn" id="edit_c_pn">
-                    </td>
-
-                    <div class="create_btn">
-                        <button onclick="create_customer()">Create</button>
-                        <button id="edit_btn" onclick="edit_customer()">Edit</button>
-                    </div>
-
-                </div>
-
-                <!-- create and edit customers' details in the table -->
-                <table id="customer_table">
-                    <thead>
-                        <tr>
-                            <th id="c_fname">First name</th>
-                            <th id="c_lname">Last name</th>
-                            <th id="c_email">Email</th>
-                            <th id="c_address">Address</th>
-                            <th id="c_pn">Phone number</th>
-                            <th id="customer_action">Action</th>
-                        </tr>
-                    </thead>
-
-                    <tr id="host_shadow">
-                        <td>PENG</td>
-                        <td>GAO</td>
-                        <td>peng@utas.edu.au</td>
-                        <td>sandy_bay</td>
-                        <td>0426615595</td>
-                        <td>
-                            <button onclick="delete_customer()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-                        </td>
-
-                    </tr>
-                    <tr id="host_shadow">
-                        <td>MENGQI</td>
-                        <td>GAN</td>
-                        <td>mengqi@utas.edu.au</td>
-                        <td>city</td>
-                        <td>0426622595</td>
-                        <td>
-                            <button onclick="delete_customer()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-                        </td>
-                    </tr>
-
-                    <tr id="host_shadow">
-                        <td>PETER</td>
-                        <td>MONKEY</td>
-                        <td>peter_monkey@utas.edu.au</td>
-                        <td>kingston</td>
-                        <td>0426012595</td>
-                        <td>
-                            <button onclick="delete_customer()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-                        </td>
-                    </tr>
-
-                </table>
-
-            </div>
-
-            <!-- ------------------------------------order tab--------------------------------- -->
             <div class="tab" id="order_content">
 
 
@@ -387,6 +305,39 @@
                 </table>
             </div>
 
+            <div class="tab" id="rate_content">
+                <table id="rate_table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Location</th>
+                            <th>Rate score (sum_rate/num_review)</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td>01</td>
+                        <td>Mel</td>
+                        <td>3.8</td>>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>02</td>
+                        <td>SYN</td>
+                        <td>3.8</td>>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>03</td>
+                        <td>Hobart</td>
+                        <td>3.8</td>>
+                    </tr>
+
+                </table>
+            </div>
+
             <div class="tab" id="accommodation_content">
                 welcome to Accommodation page
             </div>
@@ -395,130 +346,7 @@
                 welcome to review page
             </div>
 
-            <div class="tab" id="host_content">
-
-                <div class="tab tab_create">
-                    <td>
-                        Email :<input type="email" name="edit_h_email" id="edit_h_email">
-                    </td>
-
-                    <td>
-                        Location :<input type="location" name="edit_h_location" id="edit_h_location">
-                    </td>
-
-                    <td>
-                        ABN :<input type="text" name="edit_h_ABN" id="edit_h_ABN">
-                    </td>
-
-                    <td>
-                        Phone number :<input type="text" name="edit_h_pn" id="edit_h_pn">
-                    </td>
-
-                    <div class="create_btn">
-                        <button onclick="create_op()">Create</button>
-                        <button id="edit_btn" onclick="edit_op()">Edit</button>
-                    </div>
-
-                </div>
-
-
-
-
-
-
-
-                <table id="host_add_table">
-                    <thead>
-                        <tr>
-                            <th id="add_email">Email</th>
-                            <th id="add_location">Location</th>
-                            <th id="add_abn">ABN</th>
-                            <th id="add_phone">Phone Number</th>
-                            <th id="add_action">Action</th>
-                        </tr>
-                    </thead>
-
-                    <tr id="host_add_shadow">
-                        <td>peter@gmail.com</td>
-                        <td>SYN</td>
-                        <td>12345678934</td>
-                        <td>0456879089</td>
-                        <td id="add"><button onclick="add_op()" type="button" class="btn btn-outline-danger">Add</button></td>
-                    </tr>
-                    <tr id="host_add_shadow">
-                        <td>monkey@utas.edu.au</td>
-                        <td>Hobart</td>
-                        <td>12345678936</td>
-                        <td>0468666666</td>
-                        <td><button id="add" type="button" class="btn btn-outline-danger">Add</button></td>
-                    </tr>
-                    <!-- <tr>
-                        <td>peter@gmail.com</td>
-                        <td>SYN</td>
-                        <td>12345678934</td>
-                        <td>0456879089</td>
-                        <td><button id="add" type="button" class="btn btn-outline-danger">Add</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>peter@gmail.com</td>
-                        <td>SYN</td>
-                        <td>12345678934</td>
-                        <td>0456879089</td>
-                        <td><button id="add" type="button" class="btn btn-outline-danger">Add</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>peter@gmail.com</td>
-                        <td>SYN</td>
-                        <td>12345678934</td>
-                        <td>0456879089</td>
-                        <td><button id="add" type="button" class="btn btn-outline-danger">Add</button></td>
-                    </tr> -->
-
-                </table>
-                <table id="host_table">
-                    <thead>
-                        <tr>
-                            <th id="h_email">Email</th>
-                            <th id="h_location">Location</th>
-                            <th id="h_abn">ABN</th>
-                            <th id="h_phone">Phone Number</th>
-                            <th id="h_action">Action</th>
-                        </tr>
-                    </thead>
-
-                    <tr id="host_shadow">
-                        <td>2342@gmail.com</td>
-                        <td>MEL</td>
-                        <td>12345678902</td>
-                        <td>0426888888</td>
-                        <td>
-                            <button onclick="delete_host()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-                            <button id="edit" type="button" class="btn btn-outline-danger">Edit</button>
-                        </td>
-
-                    </tr>
-                    <tr id="host_shadow">
-                        <td>peter@gmail.com</td>
-                        <td>SYN</td>
-                        <td>12345678934</td>
-                        <td>0456879089</td>
-                        <td>
-                            <button id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-                            <button id="edit" type="button" class="btn btn-outline-danger">Edit</button>
-                        </td>
-                    </tr>
-
-
-
-                </table>
-
-
-
-
-
-            </div>
+            
 
             <div class="tab" id="q_n_a_content">
                 welcome to Q&A page
@@ -527,8 +355,8 @@
         </main>
     </div>
 
-    <script src="../js/dashboard.js"></script>
-    <script src="../js/CRUD.js"></script>
+    <script src="../js/host_dashboard.js"></script>
+    <!-- <script src="../js/CRUD.js"></script> -->
     <script src="../js/host_CRUD.js"></script>
 </body>
 

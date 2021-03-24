@@ -30,7 +30,12 @@ function do_admin_login() {
     location.href = "./login_admin.html"
 }
 
+function go_host_dashboard() {
+    alert("Are you sure go to host dashboard?")
+    location.href = "./host_dashboard.html"
+}
 function go_dashboard() {
-    alert("Are you sure go to Dashboard?")
+    alert("Are you sure go to system manager Dashboard?")
     location.href = "./dashboard.html"
 }
+
