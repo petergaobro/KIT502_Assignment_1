@@ -35,7 +35,7 @@ function delete_customer() {
     // search table row by step by step
     for (var i = 1; i < customer_table.rows.length; i++) {
         // click the row delete button and delete the related row
-        customer_table.rows[i].cells[4].onclick = function () {
+        customer_table.rows[i].cells[4].onclick = function() {
             // popup window show the warning Message
             var pop_window = confirm("Delete the customer detail, are you sure?");
             // valid the delete button and delete it the userinterface (html)_
@@ -53,7 +53,7 @@ function select_edit_customer() {
     var customer_table = document.getElementById('customer_table');
     for (var n = 1; n < customer_table.rows.length; n++) {
         // select the row in host add table
-        customer_table.rows[n].onclick = function () {
+        customer_table.rows[n].onclick = function() {
             // get the seected row index
             temp = this.rowIndex;
             document.getElementById("edit_c_fname").value = this.cells[0].innerHTML;
@@ -173,12 +173,6 @@ function create_op() {
 function validation() {
     var email_valid = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     var isEmpty = false,
-        // customer part
-        edit_c_fname = document.getElementById("edit_c_fname").value,
-        edit_c_lname = document.getElementById("edit_c_lname").value,
-        edit_c_email = document.getElementById("edit_c_email").value,
-        edit_c_add = document.getElementById("edit_c_add").value,
-        edit_c_pn = document.getElementById("edit_c_pn").value,
         // host part
         edit_h_email = document.getElementById("edit_h_email").value,
         edit_h_location = document.getElementById("edit_h_location").value,
@@ -246,7 +240,7 @@ function permission() {
     var add_table = document.getElementById('host_add_table');
 
     for (var i = 1; i < add_table.rows.length; i++) {
-        add_table.rows[i].onclick = function () {
+        add_table.rows[i].onclick = function() {
             // get the seected row index
             temp = this.rowIndex;
             document.getElementById("add_email").value = this.cells[0].innerHTML;
@@ -267,7 +261,7 @@ function select_edit() {
     var add_table = document.getElementById('host_add_table');
     for (var n = 1; n < add_table.rows.length; n++) {
         // select the row in host add table
-        add_table.rows[n].onclick = function () {
+        add_table.rows[n].onclick = function() {
             // get the seected row index
             temp = this.rowIndex;
             document.getElementById("edit_h_email").value = this.cells[0].innerHTML;
@@ -306,7 +300,7 @@ function delete_host() {
     // search table row by step by step
     for (var i = 1; i < host_table.rows.length; i++) {
         // click the row delete button and delete the related row
-        host_table.rows[i].cells[4].onclick = function () {
+        host_table.rows[i].cells[4].onclick = function() {
             // popup window show the warning Message
             var pop_window = confirm("Delete the host detail, are you sure?");
             // valid the delete button and delete it the userinterface (html)_
