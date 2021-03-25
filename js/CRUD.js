@@ -31,17 +31,17 @@ function create_customer() {
 // delete the review Option ---- customer page
 function delete_customer() {
     // get variable and call the id from html realated table
-    var temp, customer_table = document.getElementById('customer_table');
+    var index, customer_table = document.getElementById('customer_table');
     // search table row by step by step
     for (var i = 1; i < customer_table.rows.length; i++) {
         // click the row delete button and delete the related row
-        customer_table.rows[i].cells[4].onclick = function() {
+        customer_table.rows[i].cells[5].onclick = function() {
             // popup window show the warning Message
             var pop_window = confirm("Delete the customer detail, are you sure?");
             // valid the delete button and delete it the userinterface (html)_
             if (pop_window === true) {
-                temp = this.parentElement.rowIndex;
-                customer_table.deleteRow(temp);
+                index = this.parentElement.rowIndex;
+                customer_table.deleteRow(index);
             }
         };
     }
@@ -198,7 +198,7 @@ function valid_host() {
         alert("Phone number Connot Be Empty");
         isEmpty = true;
     } else if (edit_h_pn.length != "10") {
-        alert("Please enter 11 letter!");
+        alert("Please enter 10 letter!");
         isEmpty = true;
     }
     return isEmpty;
@@ -308,10 +308,29 @@ function delete_host() {
                 temp = this.parentElement.rowIndex;
                 // host_add_table.insertRow(temp);
                 host_table.deleteRow(temp);
+            }
+        };
+    }
+}
 
+
+
+// delete row in the review table
+function delete_review() {
+    // get variable and call the id from html realated table
+    var review_table = document.getElementById('review_table');
+    // var host_add_table = document.getElementById('host_add_table');
+    // search table row by step by step
+    for (var i = 1; i < review_table.rows.length; i++) {
+        // click the row delete button and delete the related row
+        review_table.rows[i].cells[3].onclick = function() {
+            // popup window show the warning Message
+            var pop_window = confirm("Delete the review detail, are you sure?");
+            // valid the delete button and delete it the userinterface (html)_
+            if (pop_window === true) {
+                temp = this.parentElement.rowIndex;
                 // host_add_table.insertRow(temp);
-                // host_add_table.insertRow(temp);
-                // document.getElementById("host_add_table").insertRow(-1);
+                review_table.deleteRow(temp);
             }
         };
     }

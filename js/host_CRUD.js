@@ -1,22 +1,5 @@
-
-// // delete the review Option ---- customer page
-// function delete_op() {
-//     // get variable and call the id from html realated table
-//     var temp, table = document.getElementById('review_table');
-//     // search table row by step by step
-//     for (var i = 1; i < table.rows.length; i++) {
-//         // click the row delete button and delete the related row
-//         table.rows[i].cells[4].onclick = function() {
-//             // popup window show the warning Message
-//             var pop_window = confirm("Delete the customer detail, are you sure?");
-//             // valid the delete button and delete it the userinterface (html)_
-//             if (pop_window === true) {
-//                 temp = this.parentElement.rowIndex;
-//                 table.deleteRow(temp);
-//             }
-//         };
-//     }
-// }
+// KIT 502 
+// Group 3 last edit 26/03/2021
 var order_table = document.getElementById("order_table");
 // ------------------------------create Row---------------------------
 function create_order() {
@@ -42,8 +25,6 @@ function create_order() {
             edit_garage = document.getElementById("edit_garage").value,
             edit_internet = document.getElementById("edit_internet").value;
 
-        // add_btn = document.getElementById("add").value;
-
         cell1.innerHTML = edit_location;
         cell2.innerHTML = edit_price;
         cell3.innerHTML = edit_room;
@@ -51,8 +32,6 @@ function create_order() {
         cell5.innerHTML = edit_smoke;
         cell6.innerHTML = edit_garage;
         cell7.innerHTML = edit_internet;
-        // call the function to set the event to the new row
-        // permission();
     }
 }
 
@@ -80,19 +59,16 @@ function validation() {
     } else if (edit_bathroom === "") {
         alert("Bathroom Connot Be Empty");
         isEmpty = true;
-    } 
-    else if (edit_smoke === "") {
+    } else if (edit_smoke === "") {
         alert("Smoke Connot Be Empty");
         isEmpty = true;
-    } 
-    else if (edit_garage === "") {
+    } else if (edit_garage === "") {
         alert("Garage Connot Be Empty");
         isEmpty = true;
-    } 
-    else if (edit_internet === "") {
+    } else if (edit_internet === "") {
         alert("Internet Connot Be Empty");
         isEmpty = true;
-    } 
+    }
 
     return isEmpty;
 }
@@ -142,34 +118,5 @@ function edit_order() {
         order_table.rows[temp].cells[4].innerHTML = edit_smoke;
         order_table.rows[temp].cells[5].innerHTML = edit_garage;
         order_table.rows[temp].cells[6].innerHTML = edit_internet;
-    }
-}
-
-
-
-
-
-// delete the review Option ---- host page
-function delete_host() {
-    // get variable and call the id from html realated table
-    var host_table = document.getElementById('host_table');
-    // var host_add_table = document.getElementById('host_add_table');
-    // search table row by step by step
-    for (var i = 1; i < host_table.rows.length; i++) {
-        // click the row delete button and delete the related row
-        host_table.rows[i].cells[4].onclick = function() {
-            // popup window show the warning Message
-            var pop_window = confirm("Delete the host detail, are you sure?");
-            // valid the delete button and delete it the userinterface (html)_
-            if (pop_window === true) {
-                temp = this.parentElement.rowIndex;
-                // host_add_table.insertRow(temp);
-                host_table.deleteRow(temp);
-
-                // host_add_table.insertRow(temp);
-                // host_add_table.insertRow(temp);
-                // document.getElementById("host_add_table").insertRow(-1);
-            }
-        };
     }
 }

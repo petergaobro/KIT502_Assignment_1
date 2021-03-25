@@ -1,3 +1,5 @@
+<!-- KIT 502 
+Group 3 last edit 26/03/2021 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,73 +8,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <!-- link to font style  -->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="../css/dashboard.css" />
-    <link rel="stylesheet" href="../css/host_dashboard.css" />
-
-    <title>UTas Dashboard</title>
-
-
+    <title>UTas system manager dashboard</title>
 </head>
 
-
-
-
 <body>
-
-
     <div class="db_sider">
         <div class="db_brand">
-            <h2><span class="las la-hotel"></span>Utas Hotel</h2>
+            <img src="../img/logo/logo.png" alt="">
         </div>
-
-
+        <!-- sider bar - blue  -->
         <div class="sider_bar_menu">
             <ul>
-                <li>
-                    <a href="" class="active_fun"><span class="las la-igloo"></span>
-                    <span>Dashboard</span></a>
-                </li>
-
+                <!-- nav bar in dashboard -->
                 <li>
                     <a class="active_fun" onclick="customer_tab()"><span class="las la-users"></span>
                     <span>Customers</span></a>
                 </li>
-
                 <li>
                     <a class="active_fun" onclick="order_tab()"><span class="las la-shopping-bag"></span>
-                    <span>Orders</span></a>
+                    <span>Accommodations</span></a>
                 </li>
-
                 <li>
-                    <a class="active_fun" onclick="inventory_tab()"><span class="las la-receipt"></span>
-                    <span>Accommodation</span></a>
-                </li>
-
-                <li>
-                    <a class="active_fun" onclick="account_tab()"><span class="las la-user-circle"></span>
-                    <span>Reviews</span></a>
-                </li>
-
-
-                <li>
-                    <a class="active_fun" onclick="host_tab()"><span class="las la-igloo"></span>
+                    <a class="active_fun" onclick="host_tab()"><span class="las la-user-check"></span>
                     <span>Host</span></a>
                 </li>
                 <li>
-                    <a class="active_fun" onclick="q_n_a_tab()"><span class="las la-igloo"></span>
+                    <a class="active_fun" onclick="review_tab()"><span class="las la-list-alt"></span>
+                    <span>Reviews</span></a>
+                </li>
+                <li>
+                    <a class="active_fun" onclick="q_n_a_tab()"><span class="las la-question-circle"></span>
                     <span>Q&A</span></a>
                 </li>
 
                 <li>
-                    <a href="../html/index.html" class="active_fun"><span class="las la-igloo"></span>
+                    <a href="../html/index.html" class="active_fun"><span class="las la-hotel"></span>
                     <span>Back to home</span></a>
                 </li>
             </ul>
         </div>
     </div>
-
+    <!-- main_container -->
     <div class="main_container">
         <header>
             <h2>
@@ -81,11 +60,6 @@
                 </label> Dashboard
             </h2>
 
-            <div class="search_bar">
-                <span class="las la-search"></span>
-                <input type="search" placeholder="Search" />
-            </div>
-
             <div class="user_bar">
                 <img src="../img/dashboard/user_icon.webp" alt="">
                 <div>
@@ -93,11 +67,9 @@
                     <h6>System manager</h6>
                 </div>
             </div>
-
         </header>
-
         <main>
-
+            <!-- dashboard content -->
             <div class="dash_card_container">
                 <ul>
                     <li class="active_card">
@@ -113,14 +85,12 @@
                             </div>
                         </a>
                     </li>
-
-
                     <li class="active_card">
                         <a onclick="order_tab()">
                             <div class="dash_card">
                                 <div>
                                     <h1>10</h1>
-                                    <span>Orders</span>
+                                    <span>Accommodations</span>
                                 </div>
                                 <div>
                                     <span class="las la-shopping-bag"></span>
@@ -128,35 +98,6 @@
                             </div>
                         </a>
                     </li>
-
-                    <li class="active_card">
-                        <a onclick="inventory_tab()">
-                            <div class="dash_card">
-                                <div>
-                                    <h1>10</h1>
-                                    <span>Accommodation</span>
-                                </div>
-                                <div>
-                                    <span class="las la-receipt"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="active_card">
-                        <a onclick="account_tab()">
-                            <div class="dash_card">
-                                <div>
-                                    <h1>10K</h1>
-                                    <span>Reviews</span>
-                                </div>
-                                <div>
-                                    <span class="las la-user-circle"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
                     <li class="active_card">
                         <a onclick="host_tab()">
                             <div class="dash_card">
@@ -165,12 +106,24 @@
                                     <span>Host</span>
                                 </div>
                                 <div>
-                                    <span class="las la-address-book"></span>
+                                    <span class="las la-user-check"></span>
                                 </div>
                             </div>
                         </a>
                     </li>
-
+                    <li class="active_card">
+                        <a onclick="review_tab()">
+                            <div class="dash_card">
+                                <div>
+                                    <h1>10</h1>
+                                    <span>Reviews</span>
+                                </div>
+                                <div>
+                                    <span class="las la-list-alt"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                     <li class="active_card">
                         <a onclick="q_n_a_tab()">
                             <div class="dash_card">
@@ -181,17 +134,12 @@
                                 <div>
                                     <span class="las la-question-circle"></span>
                                 </div>
-
-                                <!-- <i class="las la-address-book"></i> -->
-                                <!-- <i class="far fa-address-book"></i> -->
-
                             </div>
                         </a>
                     </li>
                 </ul>
             </div>
-
-            <!-- tab content -->
+            <!--------------------------customer card---------------------------->
             <div class="tab" id="customer_content">
                 <div class="tab tab_create">
                     <td>
@@ -216,9 +164,7 @@
                         <button onclick="create_customer()">Create</button>
                         <button id="edit_btn" onclick="edit_customer()">Edit</button>
                     </div>
-
                 </div>
-
                 <!-- create and edit customers' details in the table -->
                 <table id="customer_table">
                     <thead>
@@ -231,7 +177,6 @@
                             <th id="customer_action">Action</th>
                         </tr>
                     </thead>
-
                     <tr id="host_shadow">
                         <td>PENG</td>
                         <td>GAO</td>
@@ -241,7 +186,6 @@
                         <td>
                             <button onclick="delete_customer()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
                         </td>
-
                     </tr>
                     <tr id="host_shadow">
                         <td>MENGQI</td>
@@ -253,7 +197,6 @@
                             <button onclick="delete_customer()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
                         </td>
                     </tr>
-
                     <tr id="host_shadow">
                         <td>PETER</td>
                         <td>MONKEY</td>
@@ -264,18 +207,10 @@
                             <button onclick="delete_customer()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
                         </td>
                     </tr>
-
                 </table>
-
             </div>
-
-            <!-- ------------------------------------order tab--------------------------------- -->
+            <!--------------------------accommodation card---------------------------->
             <div class="tab" id="order_content">
-
-
-
-
-
                 <div class="tab tab_create">
                     <td>
                         Location :<input type="email" name="edit_location" id="edit_location">
@@ -309,13 +244,7 @@
                         <button onclick="create_order()">Create</button>
                         <button id="edit_btn" onclick="edit_order()">Edit</button>
                     </div>
-
-
-
-
-
                 </div>
-
                 <table id="order_table">
                     <thead>
                         <tr>
@@ -328,14 +257,6 @@
                             <th>Internet</th>
                         </tr>
                     </thead>
-
-                    <!-- <!-- <tr>
-                        <td>2342@gmail.com</td>
-                        <td>John</td>
-                        <td>Snow</td>
-                        <td>0426888888</td>
-                        <td><button onclick="delete_op()" id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
-                    </tr> -->
                     <tr>
                         <td>MEL</td>
                         <td>30</td>
@@ -345,7 +266,6 @@
                         <td>YES</td>
                         <td>YES</td>
                     </tr>
-
                     <tr>
                         <td>SYN</td>
                         <td>100</td>
@@ -355,9 +275,6 @@
                         <td>NO</td>
                         <td>YES</td>
                     </tr>
-
-
-
                     <tr>
                         <td>Hobart</td>
                         <td>90</td>
@@ -367,8 +284,6 @@
                         <td>YES</td>
                         <td>NO</td>
                     </tr>
-
-
                     <tr>
                         <td>ADELAILE</td>
                         <td>60</td>
@@ -378,55 +293,67 @@
                         <td>YES</td>
                         <td>YES</td>
                     </tr>
-
-
-
-
-
-
                 </table>
             </div>
 
-            <div class="tab" id="accommodation_content">
-                welcome to Accommodation page
-            </div>
-
+            <!--------------------------review card---------------------------->
             <div class="tab" id="review_content">
-                welcome to review page
+                <table id="review_table">
+                    <thead>
+                        <tr>
+                            <th>No.reference</th>
+                            <th>Location</th>
+                            <th>Rate score (sum_rate/num_review)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>#202101</td>
+                        <td>Mel</td>
+                        <td>3.8</td>
+                        <td>
+                            <button onclick="delete_review()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#202102</td>
+                        <td>SYN</td>
+                        <td>3.8</td>
+                        <td>
+                            <button onclick="delete_review()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#202103</td>
+                        <td>Hobart</td>
+                        <td>3.8</td>
+                        <td>
+                            <button onclick="delete_review()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
+                        </td>
+                    </tr>
+                </table>
             </div>
-
+            <!--------------------------host card---------------------------->
             <div class="tab" id="host_content">
-
                 <div class="tab tab_create">
                     <td>
                         Email :<input type="email" name="edit_h_email" id="edit_h_email">
                     </td>
-
                     <td>
                         Location :<input type="location" name="edit_h_location" id="edit_h_location">
                     </td>
-
                     <td>
                         ABN :<input type="text" name="edit_h_ABN" id="edit_h_ABN">
                     </td>
-
                     <td>
                         Phone number :<input type="text" name="edit_h_pn" id="edit_h_pn">
                     </td>
-
                     <div class="create_btn">
                         <button onclick="create_op()">Create</button>
                         <button id="edit_btn" onclick="edit_op()">Edit</button>
                     </div>
-
                 </div>
-
-
-
-
-
-
-
+                <!-- give authentication -->
                 <table id="host_add_table">
                     <thead>
                         <tr>
@@ -437,7 +364,6 @@
                             <th id="add_action">Action</th>
                         </tr>
                     </thead>
-
                     <tr id="host_add_shadow">
                         <td>peter@gmail.com</td>
                         <td>SYN</td>
@@ -452,14 +378,6 @@
                         <td>0468666666</td>
                         <td><button id="add" type="button" class="btn btn-outline-danger">Add</button></td>
                     </tr>
-                    <!-- <tr>
-                        <td>peter@gmail.com</td>
-                        <td>SYN</td>
-                        <td>12345678934</td>
-                        <td>0456879089</td>
-                        <td><button id="add" type="button" class="btn btn-outline-danger">Add</button></td>
-                    </tr>
-
                     <tr>
                         <td>peter@gmail.com</td>
                         <td>SYN</td>
@@ -467,15 +385,6 @@
                         <td>0456879089</td>
                         <td><button id="add" type="button" class="btn btn-outline-danger">Add</button></td>
                     </tr>
-
-                    <tr>
-                        <td>peter@gmail.com</td>
-                        <td>SYN</td>
-                        <td>12345678934</td>
-                        <td>0456879089</td>
-                        <td><button id="add" type="button" class="btn btn-outline-danger">Add</button></td>
-                    </tr> -->
-
                 </table>
                 <table id="host_table">
                     <thead>
@@ -487,7 +396,6 @@
                             <th id="h_action">Action</th>
                         </tr>
                     </thead>
-
                     <tr id="host_shadow">
                         <td>2342@gmail.com</td>
                         <td>MEL</td>
@@ -495,9 +403,7 @@
                         <td>0426888888</td>
                         <td>
                             <button onclick="delete_host()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-                            <button id="edit" type="button" class="btn btn-outline-danger">Edit</button>
                         </td>
-
                     </tr>
                     <tr id="host_shadow">
                         <td>peter@gmail.com</td>
@@ -506,27 +412,40 @@
                         <td>0456879089</td>
                         <td>
                             <button id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-                            <button id="edit" type="button" class="btn btn-outline-danger">Edit</button>
                         </td>
                     </tr>
-
-
-
                 </table>
-
-
-
-
-
             </div>
-
+            <!--------------------------question and answer card---------------------------->
             <div class="tab" id="q_n_a_content">
-                welcome to Q&A page
+                <table id="q_n_a_table">
+                    <thead>
+                        <tr>
+                            <th>Q.reference</th>
+                            <th>Email</th>
+                            <th>Content</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>#20101</td>
+                        <td>peter@gmail.com</td>
+                        <td>question1</td>
+                    </tr>
+                    <tr>
+                        <td>#20102</td>
+                        <td>jiayinli@gmail.com</td>
+                        <td>question2</td>
+                    </tr>
+                    <tr>
+                        <td>#20103</td>
+                        <td>monkey@gmail.com</td>
+                        <td>question3</td>
+                    </tr>
+                </table>
             </div>
-
         </main>
     </div>
-
+    <!-- called the javascript files -->
     <script src="../js/dashboard.js"></script>
     <script src="../js/CRUD.js"></script>
     <script src="../js/host_CRUD.js"></script>

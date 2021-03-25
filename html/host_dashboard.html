@@ -1,3 +1,5 @@
+<!-- KIT 502 
+Group 3 last edit 26/03/2021 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,73 +7,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
+    <!-- link css file and font style -->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="../css/dashboard.css" />
-
-    <title>UTas Dashboard</title>
-
-
+    <title>UTas host dashboard</title>
 </head>
 
-
-
-
 <body>
-
-
+    <!-- sider nav bar -->
     <div class="db_sider">
         <div class="db_brand">
-            <h2><span class="las la-hotel"></span>Utas Hotel</h2>
+            <img src="../img/logo/logo.png" alt="">
         </div>
-
-
         <div class="sider_bar_menu">
             <ul>
                 <li>
-                    <a href="" class="active_fun"><span class="las la-igloo"></span>
-                    <span>Dashboard</span></a>
+                    <a class="active_fun" onclick="order_tab()"><span class="las la-users"></span>
+                    <span>Accommodations</span></a>
                 </li>
 
                 <li>
-                    <a class="active_fun" onclick="customer_tab()"><span class="las la-users"></span>
-                    <span>Orders</span></a>
-                </li>
-
-                <li>
-                    <a class="active_fun" onclick="order_tab()"><span class="las la-shopping-bag"></span>
+                    <a class="active_fun" onclick="rate_tab()"><span class="las la-list-alt"></span>
                     <span>Rates</span></a>
                 </li>
-
                 <li>
-                    <a class="active_fun" onclick="inventory_tab()"><span class="las la-receipt"></span>
-                    <span>N/A</span></a>
-                </li>
-
-                <li>
-                    <a class="active_fun" onclick="account_tab()"><span class="las la-user-circle"></span>
-                    <span>N/A</span></a>
-                </li>
-
-
-                <li>
-                    <a class="active_fun" onclick="host_tab()"><span class="las la-igloo"></span>
-                    <span>N/A</span></a>
-                </li>
-                <li>
-                    <a class="active_fun" onclick="q_n_a_tab()"><span class="las la-igloo"></span>
-                    <span>N/A</span></a>
-                </li>
-
-                <li>
-                    <a href="../html/index.html" class="active_fun"><span class="las la-igloo"></span>
+                    <a href="../html/index.html" class="active_fun"><span class="las la-hotel"></span>
                     <span>Back to home</span></a>
                 </li>
             </ul>
         </div>
     </div>
-
     <div class="main_container">
         <header>
             <h2>
@@ -79,12 +44,7 @@
                     <span class="las la-bars"></span>
                 </label> Dashboard
             </h2>
-
-            <div class="search_bar">
-                <span class="las la-search"></span>
-                <input type="search" placeholder="Search" />
-            </div>
-
+            <!-- user nav bar -->
             <div class="user_bar">
                 <img src="../img/dashboard/user_icon.webp" alt="">
                 <div>
@@ -92,11 +52,8 @@
                     <h6>Host</h6>
                 </div>
             </div>
-
         </header>
-
         <main>
-
             <div class="dash_card_container">
                 <ul>
                     <li class="active_card">
@@ -104,7 +61,7 @@
                             <div class="dash_card">
                                 <div>
                                     <h1>10</h1>
-                                    <span>Orders</span>
+                                    <span>Accommodations</span>
                                 </div>
                                 <div>
                                     <span class="las la-users"></span>
@@ -112,8 +69,6 @@
                             </div>
                         </a>
                     </li>
-
-
                     <li class="active_card">
                         <a onclick="rate_tab()">
                             <div class="dash_card">
@@ -122,118 +77,42 @@
                                     <span>Rates</span>
                                 </div>
                                 <div>
-                                    <span class="las la-shopping-bag"></span>
+                                    <span class="las la-list-alt"></span>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="active_card">
-                        <a onclick="inventory_tab()">
-                            <div class="dash_card">
-                                <div>
-                                    <h1>N/A</h1>
-                                    <span>N/A</span>
-                                </div>
-                                <div>
-                                    <span class="las la-receipt"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="active_card">
-                        <a onclick="account_tab()">
-                            <div class="dash_card">
-                                <div>
-                                    <h1>N/A</h1>
-                                    <span>N/A</span>
-                                </div>
-                                <div>
-                                    <span class="las la-user-circle"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="active_card">
-                        <a onclick="host_tab()">
-                            <div class="dash_card">
-                                <div>
-                                    <h1>N/A</h1>
-                                    <span>N/A</span>
-                                </div>
-                                <div>
-                                    <span class="las la-address-book"></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="active_card">
-                        <a onclick="q_n_a_tab()">
-                            <div class="dash_card">
-                                <div>
-                                    <h1>N/A</h1>
-                                    <span>N/A</span>
-                                </div>
-                                <div>
-                                    <span class="las la-question-circle"></span>
-                                </div>
-
                             </div>
                         </a>
                     </li>
                 </ul>
             </div>
-
-            <!-- tab content -->
+            <!------------------------Accommodation card----------------->
             <div class="tab" id="order_content">
-
-
-
-
-                
                 <div class="tab tab_create">
                     <td>
                         Location :<input type="email" name="edit_location" id="edit_location">
                     </td>
-
                     <td>
                         Price :<input type="location" name="edit_price" id="edit_price">
                     </td>
-
                     <td>
                         Num_of_room :<input type="text" name="edit_room" id="edit_room">
                     </td>
-
                     <td>
                         Num_of_bathroom :<input type="text" name="edit_bathroom" id="edit_bathroom">
                     </td>
-
                     <td>
                         Smoke :<input type="text" name="edit_smoke" id="edit_smoke">
                     </td>
-
                     <td>
                         Garage :<input type="text" name="edit_garage" id="edit_garage">
                     </td>
-
                     <td>
                         Internet :<input type="text" name="edit_internet" id="edit_internet">
                     </td>
-
                     <div class="create_btn">
                         <button onclick="create_order()">Create</button>
                         <button id="edit_btn" onclick="edit_order()">Edit</button>
                     </div>
-
-
-
-
-
                 </div>
-
                 <table id="order_table">
                     <thead>
                         <tr>
@@ -246,14 +125,6 @@
                             <th>Internet</th>
                         </tr>
                     </thead>
-
-                    <!-- <!-- <tr>
-                        <td>2342@gmail.com</td>
-                        <td>John</td>
-                        <td>Snow</td>
-                        <td>0426888888</td>
-                        <td><button onclick="delete_op()" id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
-                    </tr> -->
                     <tr>
                         <td>MEL</td>
                         <td>30</td>
@@ -263,7 +134,6 @@
                         <td>YES</td>
                         <td>YES</td>
                     </tr>
-
                     <tr>
                         <td>SYN</td>
                         <td>100</td>
@@ -273,9 +143,6 @@
                         <td>NO</td>
                         <td>YES</td>
                     </tr>
-
-                    
-                    
                     <tr>
                         <td>Hobart</td>
                         <td>90</td>
@@ -285,8 +152,6 @@
                         <td>YES</td>
                         <td>NO</td>
                     </tr>
-
-                    
                     <tr>
                         <td>ADELAILE</td>
                         <td>60</td>
@@ -296,15 +161,9 @@
                         <td>YES</td>
                         <td>YES</td>
                     </tr>
-                    
-                    
-                    
-                    
-                    
-
                 </table>
             </div>
-
+            <!------------------------rate card----------------->
             <div class="tab" id="rate_content">
                 <table id="rate_table">
                     <thead>
@@ -314,49 +173,27 @@
                             <th>Rate score (sum_rate/num_review)</th>
                         </tr>
                     </thead>
-
                     <tr>
                         <td>01</td>
                         <td>Mel</td>
                         <td>3.8</td>>
                     </tr>
-
-                    
                     <tr>
                         <td>02</td>
                         <td>SYN</td>
                         <td>3.8</td>>
                     </tr>
-
-                    
                     <tr>
                         <td>03</td>
                         <td>Hobart</td>
                         <td>3.8</td>>
                     </tr>
-
                 </table>
             </div>
-
-            <div class="tab" id="accommodation_content">
-                welcome to Accommodation page
-            </div>
-
-            <div class="tab" id="review_content">
-                welcome to review page
-            </div>
-
-            
-
-            <div class="tab" id="q_n_a_content">
-                welcome to Q&A page
-            </div>
-
         </main>
     </div>
-
+    <!-- insert the javascript files -->
     <script src="../js/host_dashboard.js"></script>
-    <!-- <script src="../js/CRUD.js"></script> -->
     <script src="../js/host_CRUD.js"></script>
 </body>
 
