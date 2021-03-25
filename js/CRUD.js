@@ -88,7 +88,7 @@ function edit_customer() {
 
 
 
-// entry validation for customer 
+// entry valid_host for customer 
 function valid_cust() {
     var email_valid = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     var do_Empty = false,
@@ -138,7 +138,7 @@ function create_op() {
     // get value from input text
     // set the values into row cell's
     var host_add_table = document.getElementById("host_add_table");
-    if (!validation()) {
+    if (!valid_host()) {
         var newRow = host_add_table.insertRow(host_add_table.length),
             cell1 = newRow.insertCell(0),
             cell2 = newRow.insertCell(1),
@@ -162,7 +162,7 @@ function create_op() {
 }
 
 
-// --------------------------validation-----------------------
+// --------------------------valid_host-----------------------
 
 // function emailIsValid(email) {
 //     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
@@ -170,7 +170,7 @@ function create_op() {
 // /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
 
-function validation() {
+function valid_host() {
     var email_valid = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     var isEmpty = false,
         // host part
@@ -280,7 +280,7 @@ function edit_op() {
         edit_location = document.getElementById("edit_h_location").value,
         edit_abn = document.getElementById("edit_h_ABN").value,
         edit_phone = document.getElementById("edit_h_pn").value;
-    if (!validation()) {
+    if (!valid_host()) {
         add_table.rows[temp].cells[0].innerHTML = edit_mail;
         add_table.rows[temp].cells[1].innerHTML = edit_location;
         add_table.rows[temp].cells[2].innerHTML = edit_abn;
