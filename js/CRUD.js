@@ -90,7 +90,7 @@ function edit_customer() {
 
 // entry valid_host for customer 
 function valid_cust() {
-    var email_valid = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    var email_valid = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var do_Empty = false,
         // customer part
         edit_c_fname = document.getElementById("edit_c_fname").value,
@@ -104,7 +104,7 @@ function valid_cust() {
         // host part
         alert("Email entry Connot Be Empty");
         do_Empty = true;
-    } else if (edit_c_email.match(email_valid)) {
+    } else if (!email_valid.test(edit_c_email)) {
         alert("Email should be correct format");
         do_Empty = false;
     } else if (edit_c_fname === "") {
@@ -171,7 +171,7 @@ function create_op() {
 
 
 function valid_host() {
-    var email_valid = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    var email_valid = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var isEmpty = false,
         // host part
         edit_h_email = document.getElementById("edit_h_email").value,
@@ -180,12 +180,12 @@ function valid_host() {
         edit_h_pn = document.getElementById("edit_h_pn").value;
 
 
-
+    console.log('obj');
     if (edit_h_email === "") {
         // host part
         alert("Email entry Connot Be Empty");
         isEmpty = true;
-    } else if (edit_h_email.match(email_valid)) {
+    } else if (!email_valid.test(edit_h_email.value)) {
         alert("Email should be correct format");
         isEmpty = true;
     } else if (edit_h_location === "") {
