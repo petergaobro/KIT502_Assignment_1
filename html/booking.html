@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/booking.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
     <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
     <!-- <script src="https://kit.fontawesome.com/a81368914c.js"></script> -->
 </head>
@@ -72,10 +73,10 @@
         <script src="../js/toggle_bar.js" defer></script>
     </nav>
 
-    <div class = "Booking_form">
-        <form class = "Bk_form_tab">
-            <div class = "Bk_op_tab">
-                <label for = "Location">Location:</label>
+    <div class="Booking_form">
+        <form class="Bk_form_tab">
+            <div class="Bk_op_tab">
+                <label for="Location">Location:</label>
                 <select id="Location" name="Location">
                     <option value="Melbourne">Melbourne</option>
                     <option value="Hobart">Hoart</option>
@@ -83,17 +84,17 @@
                     <option value=“Adelaide”>Adelaide</option>
                 </select>
             </div>
-            <div class = "Bk_tab">
-                <label for = "checkin">Check In:</label>
-                <input type ="text" id = "checkin" name="checkin">
+            <div class="Bk_tab">
+                <label for="checkin">Check In:</label>
+                <input type="text" id="checkin" name="checkin">
             </div>
-            <div class = "Bk_tab">
-                <label for = "checkout">Check Out:</label>
-                <input type = "text" id = "checkout" name="checkout">
+            <div class="Bk_tab">
+                <label for="checkout">Check Out:</label>
+                <input type="text" id="checkout" name="checkout">
             </div>
-            <div class = "Bk_tab">
-                <label for = "guest">Number of Guests</label>
-                <input type = "number" min = "1" value = "1" id = "guest">
+            <div class="Bk_tab">
+                <label for="guest">Number of Guests</label>
+                <input type="number" min="1" value="1" id="guest">
             </div>
             <!-- <div class = "Bk_tab">
                 <label for = "children">Children: </label>
@@ -103,17 +104,17 @@
                 <label for = "rooms">Rooms:</label>
                 <input type = "number" min = "1" value = "1" id = "rooms">
             </div> -->
-            <div class = "Bk_tab">
-                <input type = "submit" class = "Search_btn" value = "Search">
+            <div class="Bk_tab">
+                <input type="submit" class="Search_btn" value="Search">
             </div>
         </form>
     </div>
 
-    <div class = "Room_type" id = "Room_type">
-        <div class = "Room_title">
+    <div class="Room_type" id="Room_type">
+        <div class="Room_title">
             <h2>Room</h2>
         </div>
-        <div class = "container_room">
+        <div class="container_room">
             <!-- single room -->
             <table class="Room_bk">
                 <td>
@@ -125,6 +126,7 @@
                     <div class="info_room">
                         <h3>Single Bed</h3>
                         <p>Single Dlux room make you feel like Home</p>
+                        <i class="las la-joint"></i>
                     </div>
                 </td>
                 <td>
@@ -133,18 +135,18 @@
                 </td>
             </table>
         </div>
-        <div class = "container_room">
-                <!-- single room -->
+        <div class="container_room">
+            <!-- single room -->
             <table class="Room_bk">
                 <td>
                     <div class="img_room">
                         <img src="..//img/Room/img2.jpg" alt="img_room">
-                        </div>
+                    </div>
                 </td>
                 <td>
                     <div class="info_room">
                         <h3>Queen Bed</h3>
-                        <p>Double Dlux room make you feel like Home</p>
+                        <p>Queen Bedroom make you like a queen</p>
                     </div>
                 </td>
                 <td>
@@ -153,18 +155,18 @@
                 </td>
             </table>
         </div>
-        <div class = "container_room">
-                    <!-- single room -->
+        <div class="container_room">
+            <!-- single room -->
             <table class="Room_bk">
                 <td>
                     <div class="img_room">
-                    <img src="../img/Room/img3.jpg" alt="img_room">
+                        <img src="../img/Room/img3.jpg" alt="img_room">
                     </div>
                 </td>
                 <td>
                     <div class="info_room">
                         <h3>King Bed</h3>
-                        <p>Single Dlux room make you feel like Home</p>
+                        <p>King bedroom make you feel like King</p>
                     </div>
                 </td>
                 <td>
@@ -173,7 +175,7 @@
                 </td>
             </table>
         </div>
-            <!-- <article class = "room">
+        <!-- <article class = "room">
                 <div class = "room-image">
                     <img src = "../img/Room/Room1.jpg" alt = "room image">
                 </div>
@@ -230,8 +232,8 @@
                 </div>
             </article>
             <!-- end of single room -->
-            <!-- single room -->
-            <!-- <article class = "room">
+        <!-- single room -->
+        <!-- <article class = "room">
                 <div class = "room-image">
                     <img src = "../img/Room/Room3.jpg" alt = "room image">
                 </div>
@@ -258,57 +260,57 @@
                     </p>
                     <button type = "button" class = "btn">book now</button>
                 </div>
-            </article> --> -->
-            <!-- end of single room -->
+            </article> -->-->
+        <!-- end of single room -->
 
 
 
 
-    <!-- seperate line part -->
-    <div class="seperate_line"></div>
+        <!-- seperate line part -->
+        <div class="seperate_line"></div>
 
 
-    <!-- <div class="tem">
+        <!-- <div class="tem">
         <img src="../img/background/background_img.jpg" alt="">
     </div> -->
 
-    <!--------------footer_part------------------->
+        <!--------------footer_part------------------->
 
-    <div class="footer_container">
-        <div class="about_us">
-            <h2>About us</h2>
-            <p>Our goal is to engage our guests and provide them with the best experience through harmonious, zealous and personable service in the most convenient, comfortable, intimate and welcoming setting.</p>
+        <div class="footer_container">
+            <div class="about_us">
+                <h2>About us</h2>
+                <p>Our goal is to engage our guests and provide them with the best experience through harmonious, zealous and personable service in the most convenient, comfortable, intimate and welcoming setting.</p>
+            </div>
+
+            <div class="social_main">
+                <div class="social_container">
+                    <li>
+                        <a href=""><img src="../img/footer_social/fb.png" alt=""></a>
+                    </li>
+                </div>
+                <div class="social_container">
+                    <li>
+                        <a href=""><img src="../img/footer_social/ins.png" alt=""></a>
+                    </li>
+                </div>
+                <div class="social_container">
+                    <li>
+                        <a href=""><img src="../img/footer_social/twitter.webp" alt=""></a>
+                    </li>
+                </div>
+                <div class="social_container">
+                    <li>
+                        <a href=""><img src="../img/footer_social/youtube.jpeg" alt=""></a>
+                    </li>
+                </div>
+            </div>
         </div>
 
-        <div class="social_main">
-            <div class="social_container">
-                <li>
-                    <a href=""><img src="../img/footer_social/fb.png" alt=""></a>
-                </li>
-            </div>
-            <div class="social_container">
-                <li>
-                    <a href=""><img src="../img/footer_social/ins.png" alt=""></a>
-                </li>
-            </div>
-            <div class="social_container">
-                <li>
-                    <a href=""><img src="../img/footer_social/twitter.webp" alt=""></a>
-                </li>
-            </div>
-            <div class="social_container">
-                <li>
-                    <a href=""><img src="../img/footer_social/youtube.jpeg" alt=""></a>
-                </li>
-            </div>
-        </div>
-    </div>
+        <footer>
+            <p>Copyright &copy; , KIT_502 Assignment_1</p>
+        </footer>
 
-    <footer>
-        <p>Copyright &copy; , KIT_502 Assignment_1</p>
-    </footer>
-
-    <!-- <ul class="social">
+        <!-- <ul class="social">
             <li><a href=""><img src="img/footer_social/fb.png" alt=""></a></li>
             <li><a href=""><img src="img/footer_social/ins.png" alt=""></a></li>
             <li><a href=""><img src="img/footer_social/twitter.webp" alt=""></a></li>
@@ -317,12 +319,16 @@
 
 
 
-    <!-- js files -->
-    <script src="../js/home.js"></script>
-    <script src="../js/home_btn.js"></script>
-    <script src="../js/search_pop.js"></script>
-    <script src="../js/admin_pop.js"></script>
-    <script src="../js/booking2.js"></script>
+        <!-- js files -->
+        <script src="../js/home.js"></script>
+        <script src="../js/home_btn.js"></script>
+        <script src="../js/search_pop.js"></script>
+        <script src="../js/admin_pop.js"></script>
+        <script src="../js/booking2.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="../js/booking.js"></script>
+
 </body>
 
 </html>
