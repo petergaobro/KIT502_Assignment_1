@@ -187,7 +187,7 @@ body {
     background: rgba(0, 0, 0, 0.3);
     padding: 10px;
     overflow: hidden;
-    background: blue;
+    background: rgb(237, 237, 241);
     margin-top: 160px;
 }
 
@@ -198,7 +198,6 @@ body {
     box-shadow: 0 0 20px 9px #3d18091f;
     border-radius: 30px;
 }
-
 .toggle-btn {
     padding: 10px 30px;
     /* padding: 10px 10px; */
@@ -222,7 +221,7 @@ body {
     align-content: center;
 }
 
-#btn {
+#switch_btn {
     top: 0;
     left: 0;
     position: absolute;
@@ -282,20 +281,20 @@ span {
     position: absolute;
 }
 
-#login {
+#login_form {
     left: 50px;
 }
 
-#login input {
+#login_form input {
     color: white;
     font-size: 15;
 }
 
-#register {
+#reg_form {
     left: 450px;
 }
 
-#register input {
+#reg_form input {
     color: white;
     font-size: 15;
 }
