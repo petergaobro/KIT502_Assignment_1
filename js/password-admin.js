@@ -48,28 +48,27 @@ admin_log_form.addEventListener('submit', (e) => {
 // ------host login------
 const login_admin_sys_email = document.getElementById('login_admin_sys_email')
 const login_admin_sys_pws = document.getElementById('login_admin_sys_pws')
-// const admin_log_form = document.getElementById('admin_log_form')
+const login_admin_form = document.getElementById('login_admin_form')
 const sys_pws_format = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$/
-const sys_email_format = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+// const sys_email_format = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 // const isvalid = false
-admin_log_form.addEventListener('submit', (e) => {
+login_admin_form.addEventListener('submit', (e) => {
     e.preventDefault()
     // let messages = []
     if (login_admin_sys_email.value === '' || login_admin_sys_email.value == null) {
         alert('Please enter Email Address!');
         isvalid = true;
     }
-    else if(!sys_email_format.test(login_admin_sys_email.value)){
-        alert('Invalid email format');
-    }
+    // else if(!sys_email_format.test(login_admin_sys_email.value)){
+    //     alert('Invalid email format');
+    // }
     else if (login_admin_sys_pws.value.length <= 5 || login_admin_sys_pws.value.length >= 13) {
         alert('Password must be longer than 6 characters and Password must be less than 12 characters.Also it must contain at least 1 lower case letter,1 uppercase letter,1 number and the following special charaters(!@#$%)');
-        // isvalid = true;
     }
     else if(!sys_pws_format.test(login_admin_sys_pws.value)){
         alert('Password must contain at least 1 lower case letter,1 uppercase letter,1 number and the following special charaters(!@#$%)');
-    }
-    else if(sys_pws_format.test(login_admin_sys_email.value) && sys_email_format.test(login_admin_sys_email.value)) {
+    }    
+    else if(sys_pws_format.value="systemer@gmail.com"){
         alert('Login in successfull.');
         window.location.href="../html/dashboard.html";
     }

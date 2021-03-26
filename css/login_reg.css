@@ -191,11 +191,13 @@ body {
     margin-top: 160px;
 }
 
+
+
 .button-box {
     width: 210px;
     margin: 35px auto;
     position: relative;
-    box-shadow: 0 0 20px 9px #3d18091f;
+    box-shadow: 0 0 20px 9px #520ae31f;
     border-radius: 30px;
 }
 .toggle-btn {
@@ -275,7 +277,7 @@ body {
 }
 
 span {
-    color: #777;
+    color: rgb(0, 0, 0);
     font-size: 12px;
     bottom: 68px;
     position: absolute;
@@ -323,7 +325,7 @@ span {
 
 .data {
     display: none;
-    color: aqua;
+    color: rgb(0, 0, 0);
 }
 
 .wrapper {
