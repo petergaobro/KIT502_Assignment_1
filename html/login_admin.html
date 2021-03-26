@@ -129,7 +129,7 @@
                                     </select>
                                 </div>
                                 <div class="content">
-                                    <form id='login_sys_form' class='input-group-login'>
+                                    <form id='reg_admin_form' class='input-group-login'>
                                         <div id="host" class="data">
                                             <table>
                                                 <tr>
@@ -149,23 +149,23 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Password</td>
-                                                    <td><input type="password" class="input-field" placeholder="Enter password" id="reg_host_pws"
+                                                    <td><input type="password" class="input-field" placeholder="Enter password" id="reg_host_pws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$"
                                                             required></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Confirm Password</td>
-                                                    <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_host_confpws"
+                                                    <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_host_confpws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$"
                                                             required></td>
                                                 </tr>
                                                 <tr>
                                                     <td>ABN</td>
-                                                    <td><input type="text" class="input-field" placeholder="ABN Number" id="reg_host_abn" required>
+                                                    <td><input type="text" class="input-field" placeholder="ABN 11 Number" minlength="11" max="11" pattern="^(\d *?){11}$" id="reg_host_abn" required>
                                                     </td>
                                                 </tr>
                                             </table>
                                             <input type="checkbox" class="check-box" required>I agree to the terms and
                                             conditions
-                                            <button type="submit" class="submit-btn">submit</a>
+                                            <button type="submit" class="submit-btn" onclick="host_pws_macth()">submit</a>
                                         </div>
                                     </form>
                                     <form>
@@ -184,25 +184,25 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Email</td>
-                                                        <td><input type="email" class="input-field" placeholder="Email Id" id="reg_sys_email"  required>
+                                                        <td><input type="email" class="input-field" placeholder="Email Id" id="reg_sys_email" required>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Password</td>
-                                                        <td><input type="password" class="input-field" placeholder="Enter password" id="reg_sys_pws" 
+                                                        <td><input type="password" class="input-field" placeholder="Enter password" id="reg_sys_pws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$"
                                                                 required>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>Confirm Password</td>
-                                                        <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_sys_conpws" 
+                                                        <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_sys_conpws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$"
                                                                 required>
                                                         </td>
                                                     </tr>
                                                 </table>
                                                 <input type="checkbox" class="check-box" required>I agree to the terms and
                                                 conditions
-                                                <button type="submit" value="button" class="submit-btn">Submit</button>
+                                                <button type="submit" value="button" class="submit-btn" onclick="pws_macth()">Submit</button>
                                             </div>
                                         </div>
                                     </form>
@@ -238,3 +238,4 @@
 </body>
 
 </html>
+
