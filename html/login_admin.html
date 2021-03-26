@@ -118,126 +118,113 @@
                                         href="../html/dashboard.html>"></a></button>
                             </div>
                         </div>
+                    </div>
                 </form>
-                </div>
-                <form id='register' class='input-group-register'>
-                    <div class="wrapper">
-                        <div class="menu">
-                            <select id="name">
+            </div>
+            <form id='register' class='input-group-register'>
+                <div class="wrapper">
+                    <div class="menu">
+                        <select id="name">
                             <option value="host">host</option>
                             <option value="manager">System Manager</option>
                         </select>
-                        </div>
-                        <div class="content">
-                            <div id="host" class="data">
-                                <table>
-                                    <tr>
-                                        <td>First Name</td>
-                                        <td><input type="text" class="input-field" placeholder="First name" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Last name</td>
-                                        <td><input type="text" class="input-field" placeholder="Last name" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><input type="email" class="input-field" placeholder="Email Id" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Enter password" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Confirm Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Confirm password" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABN</td>
-                                        <td><input type="text" class="input-field" placeholder="ABN Number" required></td>
-                                    </tr>
-                                </table>
-                                <input type="checkbox" class="check-box" required>I agree to the terms and conditions
-                                <a href="../html/login_admin.html" class="submit-btn">submit</a>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div id="manager" class="data">
-                                <table>
-                                    <tr>
-                                        <td>First Name</td>
-                                        <td><input type="text" class="input-field" placeholder="First name" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Last name</td>
-                                        <td><input type="text" class="input-field" placeholder="Last name" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><input type="email" class="input-field" placeholder="Email Id" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Enter password" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Confirm Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Confirm password" required></td>
-                                    </tr>
-                                </table>
-                                <input type="checkbox" class="check-box" required>I agree to the terms and conditions
-                                <button type="submit" value="button" class="submit-btn">Submit</button>
-                            </div>
+                    </div>
+                    <div class="content">
+                        <div id="host" class="data">
+                            <table>
+                                <tr>
+                                    <td>First Name</td>
+                                    <td><input type="text" class="input-field" placeholder="First name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Last name</td>
+                                    <td><input type="text" class="input-field" placeholder="Last name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><input type="email" class="input-field" placeholder="Email Id" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td><input type="password" class="input-field" placeholder="Enter password" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Confirm Password</td>
+                                    <td><input type="password" class="input-field" placeholder="Confirm password" required></td>
+                                </tr>
+                                <tr>
+                                    <td>ABN</td>
+                                    <td><input type="text" class="input-field" placeholder="ABN Number" required></td>
+                                </tr>
+                            </table>
+                            <input type="checkbox" class="check-box" required>I agree to the terms and conditions
+                            <a href="../html/login_admin.html" class="submit-btn">submit</a>
                         </div>
                     </div>
-
-
-
-
-
-
-
-            </div>
+                    <div class="content">
+                        <div id="manager" class="data">
+                            <table>
+                                <tr>
+                                    <td>First Name</td>
+                                    <td><input type="text" class="input-field" placeholder="First name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Last name</td>
+                                    <td><input type="text" class="input-field" placeholder="Last name" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><input type="email" class="input-field" placeholder="Email Id" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td><input type="password" class="input-field" placeholder="Enter password" required></td>
+                                </tr>
+                                <tr>
+                                    <td>Confirm Password</td>
+                                    <td><input type="password" class="input-field" placeholder="Confirm password" required></td>
+                                </tr>
+                            </table>
+                            <input type="checkbox" class="check-box" required>I agree to the terms and conditions
+                            <button type="submit" value="button" class="submit-btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; , KIT_502 Assignment_1</p>
+    </footer>
+
+
+    <!-- <script src="../js/popup_window.js"></script> -->
+    <script src="../js/log_reg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
 
+    <script>
+        $(Document).ready(function() {
+            $("#name").on('change', function() {
+                $(".data").hide();
+                $("#" + $(this).val()).fadeIn();
+            }).change();
+        });
+    </script>
+    <script>
+        $(Document).ready(function() {
+            $("#name1").on('change', function() {
+                $(".data1").hide();
+                $("#" + $(this).val()).fadeIn();
+            }).change();
+        });
+    </script>
 
 
-
-
-
-        <footer>
-            <p>Copyright &copy; , KIT_502 Assignment_1</p>
-        </footer>
-
-
-        <!-- <script src="../js/popup_window.js"></script> -->
-        <script src="../js/log_reg.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
-
-        <script>
-            $(Document).ready(function() {
-                $("#name").on('change', function() {
-                    $(".data").hide();
-                    $("#" + $(this).val()).fadeIn();
-                }).change();
-            });
-        </script>
-        <script>
-            $(Document).ready(function() {
-                $("#name1").on('change', function() {
-                    $(".data1").hide();
-                    $("#" + $(this).val()).fadeIn();
-                }).change();
-            });
-        </script>
-
-
-        <script src="../js/admin_pop.js"></script>
+    <script src="../js/admin_pop.js"></script>
 
 </body>
 

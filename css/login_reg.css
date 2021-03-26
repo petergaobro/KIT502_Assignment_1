@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Hachi+Maru+Pop&family=Monoton&family=Syncopate&display=swap');
-
-/* body {
-    box-sizing: border-box;
-    line-height: 1.5;
-    padding: 0;
-    margin: 0;
-} */
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 body {
-    /* background: wheat; */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background/background_img.jpg);
     background-size: cover;
     background-position: center;
@@ -17,7 +9,6 @@ body {
     margin: 0;
     box-sizing: border-box;
     line-height: 1.5;
-    /* background-size: cover; */
 }
 
 .logo {
@@ -33,10 +24,7 @@ body {
 }
 
 .nav_bar {
-    /* background-repeat: no-repeat;
-	background-position: center; */
     margin-top: 0;
-    /* position: fixed; */
     width: 1100px;
     height: 130px;
     display: flex;
@@ -46,11 +34,6 @@ body {
     z-index: 100000;
 }
 
-
-/* .sbtn{
-    display: inline-block;
-} */
-
 .nav_links ul {
     margin: 0;
     padding: 0;
@@ -58,7 +41,6 @@ body {
 }
 
 .nav_links li {
-    /* list-style: none; */
     display: inline-flex;
 }
 
@@ -66,11 +48,9 @@ body {
     text-decoration: none;
     color: white;
     padding: 1rem;
-    /* display: block; */
     font-size: 25px;
-    /* font-weight:bold; */
     position: relative;
-    font-family: 'Boogaloo', cursive;
+    font-family: 'Noto Serif', serif;
 }
 
 .nav_links li a:hover {
@@ -93,7 +73,6 @@ body {
 .sub_user {
     display: none;
     width: 150px;
-    /* width: auto; */
 }
 
 .nav_links ul li:hover .sub_user {
@@ -112,17 +91,10 @@ body {
 
 .nav_links ul li:hover .sub_user ul li {
     width: 100px;
-    /* padding: 2px; */
-    /* border: 1px dotted #fff; */
     background: transparent;
     border-radius: 30%;
     text-align: center;
 }
-
-
-/* .login_sign a {
-    padding: 5px;
-} */
 
 .active_nav::before {
     content: "";
@@ -171,14 +143,6 @@ body {
     position: relative;
 }
 
-
-/* .login_main_container{
-    background-size: cover;
-    background-position: center center;
-    box-sizing: border-box;
-    margin: 0 auto;
-} */
-
 .show_container {
     width: 380px;
     height: 700px;
@@ -201,7 +165,6 @@ body {
 
 .toggle-btn {
     padding: 10px 30px;
-    /* padding: 10px 10px; */
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -212,7 +175,6 @@ body {
 .toggle-btn_reg {
     padding: 10px;
     padding-left: 28px;
-    /* padding-top: 15px; */
     cursor: pointer;
     background: transparent;
     outline: none;

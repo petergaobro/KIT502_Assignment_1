@@ -2,26 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Hachi+Maru+Pop&family=Monoton&family=Syncopate&display=swap');
-
-/* *
-{
-	background-repeat: no-repeat;
-	background-position: center;
-} */
-
-
-/* *::before
-*::after{
-
-} */
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     line-height: 1.5;
     background-size: cover;
-    background-color: rgb(201, 180, 178);
+    background-color: rgb(0, 0, 0);
 }
 
 
@@ -30,7 +18,6 @@ body {
 .covid_div {
     margin-top: 0;
     position: relative;
-    /* z-index: 101 !important; */
     display: block;
     height: 60px;
     background-color: #222222;
@@ -52,19 +39,7 @@ body {
     color: #a3a3a3;
 }
 
-
-/* --------------------part 2------------------- */
-
-
-/* .logo{
-	width: 50%;
-} */
-
 .nav_bar {
-    /* background-repeat: no-repeat;
-	background-position: center; */
-    /* position: fixed;
-    position: absolute; */
     width: 1100px;
     height: 130px;
     display: flex;
@@ -74,11 +49,6 @@ body {
     z-index: 100000;
 }
 
-
-/* .sbtn{
-    display: inline-block;
-} */
-
 .nav_links ul {
     margin: 0;
     padding: 0;
@@ -86,19 +56,16 @@ body {
 }
 
 .nav_links li {
-    /* list-style: none; */
     display: inline-flex;
 }
 
 .nav_links li a {
     text-decoration: none;
-    color: rgb(148, 15, 15);
+    color: #fff;
     padding: 1rem;
-    /* display: block; */
     font-size: 25px;
-    /* font-weight:bold; */
     position: relative;
-    font-family: 'Boogaloo', cursive;
+    font-family: 'Noto Serif', serif;
 }
 
 .nav_links li a:hover {
@@ -121,7 +88,6 @@ body {
 .sub_user {
     display: none;
     width: 150px;
-    /* width: auto; */
 }
 
 .nav_links ul li:hover .sub_user {
@@ -140,17 +106,10 @@ body {
 
 .nav_links ul li:hover .sub_user ul li {
     width: 100px;
-    /* padding: 2px; */
-    /* border: 1px dotted #fff; */
     background: transparent;
     border-radius: 30%;
     text-align: center;
 }
-
-
-/* .login_sign a {
-    padding: 5px;
-} */
 
 .active_nav::before {
     content: "";
@@ -245,12 +204,9 @@ body {
 /*------------------ booking form------------- */
 
 .Booking_form {
-    background: rgba(201, 180, 178, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     color: #fff;
-    /* padding: 40px 60px; */
-    /* margin-top: auto; */
     align-items: center;
-    /* position: absolute; */
 }
 
 .Bk_form_tab {
@@ -344,23 +300,16 @@ body {
     font-size: auto;
 }
 
-
-/* room */
-
-
-/* .rooms{
-    margin: 40px 0;
-} */
-
 .Room_bk {
     margin: 45px 0;
     padding-bottom: 25px;
-    background: rgba(42, 190, 129, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     color: rgb(20, 14, 14);
 }
 
 .info_room {
     padding: 5px 20px;
+    color: #fff;
 }
 
 .info_room h3 {
@@ -380,15 +329,6 @@ body {
     color: var(--yellow);
     margin-right: 10px;
 }
-
-
-/* .rate{
-    opacity: 0.8;
-}
-.rate span{
-    font-size: 40px;
-    font-weight: 900;
-    color: var(--yellow); */
 
 .img_room {
     overflow: hidden;
@@ -416,6 +356,10 @@ body {
     cursor: pointer;
     transition: var(--transition);
     color: rgb(red);
+}
+
+#strong {
+    color: #fff;
 }
 
 @media (min-width: 900px) {
@@ -464,15 +408,9 @@ body {
     position: relative;
     width: 100%;
     height: auto;
-    /* align-items: center; */
-    /* padding: 30px; */
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* flex-wrap: wrap; */
 }
 
 .about_us {
-    /* margin-right: 30px; */
     color: black;
     align-items: center;
     text-align: center;
@@ -511,32 +449,3 @@ body {
         grid-gap: 20px;
     }
 }
-
-
-/* @media(min-width: 1170px){
-    .footer{
-        text-align: left;
-    }
-    .footer-container{
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .footer-container div:nth-child(1) p{
-        padding-right: 20px;
-    }
-    .contact-item{
-        display: grid;
-        grid-template-columns: 10% 90%;
-        margin-bottom: 15px;
-        align-items: center;
-    } */
-
-
-/* .showModal{
-    position: fixed;
-    background: transparent;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
-} */

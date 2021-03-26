@@ -1,3 +1,6 @@
+<!-- KIT 502 
+Group 3 last edit 26/03/2021 -->
+
 <!DOCTYPE html>
 <html>
 
@@ -10,13 +13,9 @@
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="shortcut icon" type="image" href="../img/logo/Photo.png">
-    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
-    <!-- <script src="https://kit.fontawesome.com/a81368914c.js"></script> -->
 </head>
 
 <body>
-
-
     <!---------------part 1-------------------->
     <div class="covid_div">
         <aside class="covid_notice">
@@ -25,75 +24,39 @@
             </a>
         </aside>
     </div>
-
-
     <nav class="nav_bar">
-
         <div class="logo">
             <img src="../img/logo/Photo.png" alt="">
-            <!-- <p>UTas</p>
-            <p>Hotel</p> -->
         </div>
-
-
         <a href="#" class="toggle_btn">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </a>
-
         <div class="nav_links">
             <ul class="list_nav">
                 <li><a class="active_nav" href="./index.html">Home</a></li>
                 <li><a class="active_nav" href="../html/booking.html">Book</a></li>
-                <!-- <li><a class="active_nav" href="">Experiences</a></li> -->
                 <li><a class="active_nav" href="#">Customer</a>
-
+                    <!-- sub user bar -->
                     <div class="sub_user">
                         <ul>
                             <li><a href="../html/login_reg.html">Login</a></li>
                             <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li>
                             <li><a href="../html/client_review.html">Review</a></li>
-                            <li><a href="../html/rate.html">Rate</a></li>
                         </ul>
                     </div>
-
-
                 </li>
-
-
                 <li><a href="../html/login_admin.html"><button  id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()" >Admin</button></a></li>
                 <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li>
             </ul>
-
-
-
-
-
-
-
-
         </div>
-
         <script src="../js/toggle_bar.js" defer></script>
     </nav>
 
-
-
-
-
     <!---------------part 2-------------------->
     <div class="gallery_container">
-
-        <!-- button bookmore -->
-
-
         <div class="slide_show_container">
-
-
-
-
-
             <div onclick="push_slides(-1)" class="radio_btn arrow_prev">
                 <span class="arrow prev_arrow"></span>
             </div>
@@ -125,23 +88,15 @@
                 <p class="text_form">The Disaster Café, Location: Loloret de Mar, Spain</p>
             </div>
 
-
+            <!-- booking button -->
             <div class="more_info">
                 <a class="explore_btn" href="../html/booking.html">BOOKING NOW</a>
-                <!-- <a href=""><button id="open" >Search Now</button></a> -->
-                <!-- <script type="javascript" src=""></script> -->
-                <!-- <a href="" class="search_info" id="open">SEARCH NOW</a> -->
-                <!-- <button id="explore">EXPLORE NOW</button> -->
-                <!-- <button id="open">Search Now</button> -->
-                <!-- <button id="open" type="button" class="btn btn-info">Search Now</button> -->
-
             </div>
 
             <!-- search popup window -->
             <div class="search_container" id="search_container">
                 <div class=" booking-form-box ">
                     <div class="booking-form ">
-                        <!-- <form action="/action_page.php" method="POST"> -->
                         <form>
                             <label for="gsearch"><h5>City:</h5></label><br>
                             <select name="city" id="city">
@@ -150,102 +105,25 @@
                                 <option value="opel">Opel</option>
                                 <option value="audi">Audi</option>
                             </select><br>
-
-
                             <label for="checkin"><h5>Check in:</h5></label>
                             <input type="datetime-local" id="checkin" name="checkin">
-
-
                             <label for="checkout"><h5>Check out:</h5></label>
                             <input type="datetime-local" id="checkout" name="checkout">
-
                             <label for="quantity"><h5>Guests number:</h5></label>
                             <input type="number" name="quantity" id="quantity" min="1">
-
-
                             <button class="btn btn-danger" id="close">Close Me</button>
                         </form>
-
-                        <!-- <input type="submit" value="Submit"> -->
-
-
-
-
-
-
-
-                        <!-- <input type="search" name="gsearch" id="gsearch">
-                            <input type="submit" value="Search"> -->
-                        <!-- </form>
-                        <form>
-
-                        </form>
-                        <form>
-
-                        </form>
-                        <form>
-
-                        </form> -->
-
-                        <!-- <label>Location</label>
-                        <input type="text " class="form-control " placeholder="City ">
-
-
-                        <div class="input-grp ">
-                            <label>Check in</label>
-                            <input type="date " class="form-control select-data ">
-                        </div>
-
-                        <div class="input-grp ">
-                            <label>Check Out</label>
-                            <input type="date " class="form-control select-data ">
-                        </div>
-
-                        <div class="input-grp ">
-                            <label>Adults</label>
-                            <input type="number " class="form-control " value="1 ">
-                        </div>
-
-                        <div class="input-grp ">
-                            <label>Children</label>
-                            <input type="number " class="form-control " value="0 ">
-                        </div>
-
-                        <div class="input-grp ">
-                            <button type="button " class="btn btn-success flight ">Show Room</button>
-                        </div>
-
-                        <div class="input-grp ">
-                            <button class="btn btn-danger" id="close">Close Me</button>
-                        </div> -->
                     </div>
                 </div>
             </div>
-
-
-
-            <!-- <div class="form"></div> -->
-
-
-
-
         </div>
-
         <div id="dots_container"></div>
     </div>
-    <!-- <script type="text/javascript" src="js/myScript.js"></script> -->
-
 
     <!-- seperate line part -->
     <div class="seperate_line"></div>
 
-
-    <!-- <div class="tem">
-        <img src="../img/background/background_img.jpg" alt="">
-    </div> -->
-
     <!--------------footer_part------------------->
-
     <div class="footer_container">
         <div class="about_us">
             <h2>About us</h2>
@@ -275,20 +153,10 @@
             </div>
         </div>
     </div>
-
+    <!-- footer part -->
     <footer>
         <p>Copyright &copy; , KIT_502 Assignment_1</p>
     </footer>
-
-    <!-- <ul class="social">
-            <li><a href=""><img src="img/footer_social/fb.png" alt=""></a></li>
-            <li><a href=""><img src="img/footer_social/ins.png" alt=""></a></li>
-            <li><a href=""><img src="img/footer_social/twitter.webp" alt=""></a></li>
-            <li><a href=""><img src="img/footer_social/youtube.jpeg" alt=""></a></li>
-        </ul> -->
-
-
-
     <!-- js files -->
     <script src="../js/home.js"></script>
     <script src="../js/search_pop.js"></script>

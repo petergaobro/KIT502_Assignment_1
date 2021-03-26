@@ -1,3 +1,4 @@
+// assign the variable for them
 var slide_temp, slides, dots, text_temp;
 
 function gallery_slides() {
@@ -17,7 +18,7 @@ function gallery_slides() {
         }
     }
 
-    //add dots
+    //add dots to scroll
     dots = [];
     var dots_container = document.getElementById("dots_container"),
         i;
@@ -44,18 +45,20 @@ function sliding(n) {
         is_next: ""
     };
     var sliding_text_class;
+    // click left btn, then slide go left
     if (n > slide_temp) {
         if (n >= slides.length) { n = 0; }
         sliding_class.is_prev = "prev_slide_left";
         sliding_class.is_next = "next_slide_left";
         sliding_text_class = "slideTextFromTop";
+        // click right btn, then slide go left
     } else if (n < slide_temp) {
         if (n < 0) { n = slides.length - 1; }
         sliding_class.is_prev = "prev_slide_right";
         sliding_class.is_next = "next_slide_right";
         sliding_text_class = "slideTextFromBottom";
     }
-
+    // the img will display follow the button (left, right)
     if (n != slide_temp) {
         next = slides[n];
         current = slides[slide_temp];
@@ -68,20 +71,20 @@ function sliding(n) {
         next.classList.add(sliding_class.is_next);
         dots[n].classList.add("active");
         slide_temp = n;
+        // once the img move, the word that related to it will be moved too
         text_temp.style.display = "none";
         text_temp.className = "text_form " + sliding_text_class;
         text_temp.innerText = slides[n].querySelector(".text_form").innerText;
         text_temp.style.display = "block";
     }
-
 }
 
+// the speed the moving
 // show the animation of galllery image automatically
 // https://www.w3schools.com/jsref/met_win_setinterval.asp
 var timer = null;
 
 function slide_timer() {
     timer = setInterval(function() { push_slides(1) }, 3000);
-
 }
 slide_timer();

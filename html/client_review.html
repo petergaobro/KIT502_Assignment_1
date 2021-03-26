@@ -5,68 +5,43 @@
     <meta charset="UTF-8">
 
     <title>KIT_502_web_dev</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../css/home.css"> -->
     <link rel="stylesheet" type="text/css" href="../css/popup_window.css">
     <link rel="stylesheet" type="text/css" href="../css/client_review.css">
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
-    <!-- <script src="https://kit.fontawesome.com/a81368914c.js"></script> -->
 </head>
 
 <body>
-
-    <!---------------part 1-------------------->
-    <!-- <div class="img_area"></div> -->
-    <!-- <div class="covid_div">
-        <aside class="covid_notice">
-            <a class="covid_news" href="https://www.australia.gov.au/">
-                <span class="covid_words">Get the latest on our COVID-19 response</span>
-            </a>
-        </aside>
-    </div> -->
-
-
     <nav class="nav_bar">
         <div class="logo">
             <p>UTas</p>
             <p>Accommodation</p>
         </div>
-
         <a href="#" class="toggle_btn">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </a>
-
         <div class="nav_links">
             <ul class="list_nav">
                 <li><a class="active_nav" href="./index.html">Home</a></li>
                 <li><a class="active_nav" href="">Book</a></li>
                 <li><a class="active_nav" href="#">Customer</a>
-
                     <div class="sub_user">
                         <ul>
                             <li><a href="../html/login_reg.html">Login</a></li>
                             <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li>
                             <li><a href="../html/client_review.html">Review</a></li>
-                            <li><a href="">Rate</a></li>
                         </ul>
                     </div>
                     <li><a class="login_sign" href="./login_reg.html">Login</a></li>
-                    <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
-                    <!-- <a href="" class="search_info" id="open">SEARCH NOW</a> -->
             </ul>
         </div>
         <script src="../js/toggle_bar.js" defer></script>
     </nav>
 
-
-
-
     <!-- search popup window -->
-    <!-- <div class="review_container"> -->
 
     <div class="review_container">
         <table id="review_table">
@@ -98,7 +73,6 @@
                 <td>King</td>
                 <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
             </tr>
-
             <tr>
                 <td>Adelaide</td>
                 <td>12/03/2020</td>
@@ -106,7 +80,6 @@
                 <td>Queen</td>
                 <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
             </tr>
-
             <tr>
                 <td>Canberra</td>
                 <td>20/03/2020</td>
@@ -114,6 +87,28 @@
                 <td>Twin</td>
                 <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
             </tr>
+            <tr>
+                <td>Sydney</td>
+                <td>04/03/2020</td>
+                <td>5</td>
+                <td>Double</td>
+                <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Canberra</td>
+                <td>20/03/2020</td>
+                <td>9</td>
+                <td>Twin</td>
+                <td><button id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Melbourne</td>
+                <td>21/03/2020</td>
+                <td>3</td>
+                <td>Single</td>
+                <td><button onclick="delete_op()" id="delete" type="button" class="btn btn-outline-danger">Delete</button></td>
+            </tr>
+
 
         </table>
     </div>

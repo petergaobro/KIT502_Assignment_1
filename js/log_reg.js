@@ -13,11 +13,3 @@ function login() {
     y.style.left = '450px';
     z.style.left = '0px';
 }
-
-
-// var modal = document.getElementById('login-form');
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }

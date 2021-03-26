@@ -1,11 +1,5 @@
-// document.getElementById("open").addEventListener("click", function() {
-//     document.querySelector(".search_container").style.display = "flex";
-// })
-
-// document.querySelector(".close").addEventListener("click", function() {
-//     document.querySelector(".search_container").style.display = "none";
-// })
-
+// KIT 502 
+// Group 3 last edit 26/03/2021
 
 const open = document.getElementById("open");
 const search_container = document.getElementById("search_container");
