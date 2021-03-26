@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Hachi+Maru+Pop&family=Monoton&family=Syncopate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 /* *
 {
@@ -96,7 +97,8 @@ body {
     font-size: 25px;
     /* font-weight:bold; */
     position: relative;
-    font-family: 'Boogaloo', cursive;
+    font-family: 'Noto Serif', serif;
+    /* font-family: 'Boogaloo', cursive; */
 }
 
 .nav_links li a:hover {
@@ -221,18 +223,30 @@ body {
     font-family: "Monoton", cursive;
     font-size: 1.5rem;
     margin: .5rem;
-    color: white;
+    /* color: white; */
+    width: 150px;
+    /* position: fixed; */
+    /* height: 130px; */
 }
 
-.logo p {
+.logo img {
+    /* border-radius: 50%; */
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 20px;
+}
+
+
+/* .logo p {
     margin-top: 0;
     margin-bottom: 0;
-}
+} */
 
-.login_container img {
+
+/* .login_container img {
     width: 50%;
     height: 100%;
-}
+} */
 
 .login_container img {
     width: 100%;
