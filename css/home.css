@@ -121,6 +121,7 @@ body {
 .sub_user {
     display: none;
     width: 150px;
+    padding-left: 10px;
     /* width: auto; */
 }
 
