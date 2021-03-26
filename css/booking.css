@@ -373,7 +373,7 @@ body {
     }
 }
 
-@media(min-width: 1370px) {
+@media(min-width: 1110px) {
     .container_room {
         flex-direction: column;
     }

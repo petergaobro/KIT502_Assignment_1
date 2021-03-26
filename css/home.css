@@ -535,3 +535,17 @@ body {
     color: #fff;
     padding: 20px;
 }
+
+.search_container .Booking_form a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: 25px;
+    position: relative;
+    font-family: 'Noto Serif', serif;
+}
+
+.search_container .Booking_form a:hover {
+    color: tomato;
+    transition: .9s;
+}
