@@ -7,9 +7,9 @@ function create_order() {
     // create a new row and cells
     // get value from input text
     // set the values into row cell's
-
     if (!validation()) {
         var newRow = order_table.insertRow(order_table.length),
+            // insert the cell content into the new row
             cell1 = newRow.insertCell(0),
             cell2 = newRow.insertCell(1),
             cell3 = newRow.insertCell(2),
@@ -17,6 +17,7 @@ function create_order() {
             cell5 = newRow.insertCell(4),
             cell6 = newRow.insertCell(5),
             cell7 = newRow.insertCell(6),
+
             edit_location = document.getElementById("edit_location").value,
             edit_price = document.getElementById("edit_price").value,
             edit_room = document.getElementById("edit_room").value,
@@ -24,7 +25,6 @@ function create_order() {
             edit_smoke = document.getElementById("edit_smoke").value,
             edit_garage = document.getElementById("edit_garage").value,
             edit_internet = document.getElementById("edit_internet").value;
-
         cell1.innerHTML = edit_location;
         cell2.innerHTML = edit_price;
         cell3.innerHTML = edit_room;
@@ -35,9 +35,7 @@ function create_order() {
     }
 }
 
-
 // --------------------------entry validation-----------------------
-
 function validation() {
     var isEmpty = false;
     var edit_location = document.getElementById("edit_location").value,
@@ -69,16 +67,8 @@ function validation() {
         alert("Internet Connot Be Empty");
         isEmpty = true;
     }
-
     return isEmpty;
 }
-
-
-
-
-
-
-
 
 // select row to edit
 function select_edit() {
@@ -99,7 +89,6 @@ function select_edit() {
     }
 }
 select_edit();
-
 
 function edit_order() {
     var edit_location = document.getElementById("edit_location").value,

@@ -14,6 +14,7 @@ function create_customer() {
             cell3 = newRow.insertCell(2),
             cell4 = newRow.insertCell(3),
             cell5 = newRow.insertCell(4),
+            // put the edit content into the related row
             edit_c_fname = document.getElementById("edit_c_fname").value,
             edit_c_lname = document.getElementById("edit_c_lname").value,
             edit_c_email = document.getElementById("edit_c_email").value,
@@ -56,6 +57,7 @@ function select_edit_customer() {
         customer_table.rows[n].onclick = function() {
             // get the seected row index
             temp = this.rowIndex;
+            // select and get the value in the table
             document.getElementById("edit_c_fname").value = this.cells[0].innerHTML;
             document.getElementById("edit_c_lname").value = this.cells[1].innerHTML;
             document.getElementById("edit_c_email").value = this.cells[2].innerHTML;
@@ -75,6 +77,7 @@ function edit_customer() {
         edit_c_email = document.getElementById("edit_c_email").value,
         edit_c_add = document.getElementById("edit_c_add").value,
         edit_c_pn = document.getElementById("edit_c_pn").value;
+    // valid the entry
     if (!valid_cust()) {
         customer_table.rows[temp].cells[0].innerHTML = edit_c_fname;
         customer_table.rows[temp].cells[1].innerHTML = edit_c_lname;
@@ -83,10 +86,6 @@ function edit_customer() {
         customer_table.rows[temp].cells[4].innerHTML = edit_c_pn;
     }
 }
-
-
-
-
 
 // entry valid_host for customer 
 function valid_cust() {
@@ -99,7 +98,7 @@ function valid_cust() {
         edit_c_add = document.getElementById("edit_c_add").value,
         edit_c_pn = document.getElementById("edit_c_pn").value;
 
-
+    // valid entry
     if (edit_c_email === "") {
         // host part
         alert("Email entry Connot Be Empty");
@@ -127,11 +126,8 @@ function valid_cust() {
 }
 
 
-
-
-
-// ----------------------------------------------------host---------------------------------
-// ------------------------------create Row---------------------------
+// ----------------------------------------------------host part---------------------------------
+//  create row
 function create_op() {
     // get the table by id
     // create a new row and cells
@@ -308,29 +304,6 @@ function delete_host() {
                 temp = this.parentElement.rowIndex;
                 // host_add_table.insertRow(temp);
                 host_table.deleteRow(temp);
-            }
-        };
-    }
-}
-
-
-
-// delete row in the review table
-function delete_review() {
-    // get variable and call the id from html realated table
-    var review_table = document.getElementById('review_table');
-    // var host_add_table = document.getElementById('host_add_table');
-    // search table row by step by step
-    for (var i = 1; i < review_table.rows.length; i++) {
-        // click the row delete button and delete the related row
-        review_table.rows[i].cells[3].onclick = function() {
-            // popup window show the warning Message
-            var pop_window = confirm("Delete the review detail, are you sure?");
-            // valid the delete button and delete it the userinterface (html)_
-            if (pop_window === true) {
-                temp = this.parentElement.rowIndex;
-                // host_add_table.insertRow(temp);
-                review_table.deleteRow(temp);
             }
         };
     }

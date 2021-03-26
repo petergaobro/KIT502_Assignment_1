@@ -204,11 +204,9 @@ background: #191970;
 color: #fff;
 } */
 
-#customer_content,
+#user_content,
 #order_content,
-#accommodation_content,
 #review_content,
-#host_content,
 #rate_content,
 #q_n_a_content {
     color: #fff;
