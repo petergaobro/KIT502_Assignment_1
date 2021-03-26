@@ -83,13 +83,16 @@
                     <button type='submit' class='submit-btn'>Log in</button>
                 </form>
                 <form id='reg_form' class='input-group-register'>
-                    <input type="text" class="input-field" placeholder="*First Name" required>
-                    <input type="text" class="input-field" placeholder="*Last Name" required>
-                    <input type="age" class="input-field" placeholder="age" required>
-                    <input type="text" class="input-field" placeholder="First Name" required>
-                    <input type='text' class='input-field' placeholder='*Email Id' required>
-                    <input type='password' class='input-field' placeholder='*Enter Password' required>
-                    <input type="password" class="input-field" placeholder="*confirm password" required>
+                    <input type="text" class="input-field" placeholder="* First Name" id="reg_fname" required>
+                    <input type="text" class="input-field" placeholder="* Last Name" id="reg_lname" required>
+                    <input type='email' class='input-field' placeholder='* Email Address ' id="reg_email" required>
+                    <input type='password' class='input-field' placeholder='*Enter Password' id="reg_pws" required>
+                    <input type="password" class="input-field" placeholder="*confirm password" id="reg_cpws" required>
+                    <input type="text" class="input-field" placeholder="* Phone Number" id="reg_ph_no" required>
+                    <input type="text" class="input-field" placeholder="*Location" id="reg_loc" required>
+                    <p>Box with * must be filled</p>
+                    <!-- <input type="" class="input-field" placeholder="First Name" required> -->
+                    <!-- <p>You must fill this form with "*"</p> -->
                     <input type="checkbox" class="check-box" required>I agree to the terms and conditions
                     <button type='submit' class='submit-btn'>Submit</button>
             </div>
@@ -117,7 +120,7 @@
     <!-- <script src="../js/popup_window.js"></script> -->
     <script src="../js/log_reg.js"></script>
     <script src="../js/admin_pop.js"></script>
-    <script src="../js/password.js"></script>
+    <script src="../js/password-client.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <!-- <script src="../js/option.js"></script> -->
 
