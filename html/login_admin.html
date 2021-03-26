@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/popup_window.css">
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/home.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
 
@@ -29,11 +30,17 @@
         <div class="nav_links">
             <ul class="list_nav">
                 <li><a class="active_nav" href="./index.html">Home</a></li>
-                <li><a class="active_nav" href="">Rooms</a></li>
-                <li><a class="active_nav" href="">Book</a></li>
-                <li><a class="active_nav" href="">Experiences</a></li>
-                <li><a class="active_nav" href="">Oline Experiences</a></li>
-                <li><a class="login_sign" href="./login_reg.html">Login</a></li>
+                <li><a class="active_nav" href="../html/booking.html">Book</a></li>
+                <li><a class="active_nav" href="#">Customer</a>
+                    <div class="sub_user">
+                        <ul>
+                            <li><a href="../html/login_reg.html">Login</a></li>
+                            <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li>
+                            <li><a href="../html/client_review.html">Review</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../html/login_admin.html"><button  id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()" >Admin</button></a></li>
             </ul>
         </div>
         <script src="../js/toggle_bar.js" defer></script>
@@ -60,7 +67,7 @@
                             </select>
                         </div>
                         <div class="content1">
-                            <form id='login_host_form' class='input-group-login'>
+                            <form id='login_host_form' class='input-admin-login'>
                                 <div id="host1" class="data1">
                                     <table>
                                         <tr>
@@ -81,68 +88,69 @@
                                 </div>
                             </form>
                         </div>
-                        <form id='login_admin_form' class='input-group-login'>
+                        <form id='login_admin_form' class='input-admin-login'>
                             <div id="system1" class="data1">
                                 <table>
                                     <tr>
                                         <td>Email</td>
-                                        <td><input type="email" class="input-field" palceholder="Email" id="login_admin_sys_email" required>
+                                        <td><input type="email" class="input-field" placeholder="Email" id="login_admin_sys_email" required>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Enter Password" id="login_admin_sys_pws" required>
+                                        <td><input type="password" class="input-field" placeholder="Enter Password" id="login_admin_sys_pws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$" required>
                                         </td>
                                     </tr>
                                 </table>
                                 <input type="checkbox" class="check-box">Remember Password
                                 <button type="submit" value="button" class="submit-btn">Login</button>
                             </div>
+                        </form>
                     </div>
-                    </form>
-                    <form id='sys_reg_form' class='input-group-register'>
-                        <div class="wrapper">
-                            <div class="menu">
-                                <select id="name">
+                </form>
+                <form id='sys_reg_form' class='input-group-register'>
+                    <div class="wrapper">
+                        <div class="menu">
+                            <select id="name">
                                         <option value="host">host</option>
                                         <option value="manager">System Manager</option>
                                     </select>
-                            </div>
-                            <div class="content">
-                                <form id='reg_admin_form' class='input-group-login'>
-                                    <div id="host" class="data">
-                                        <table>
-                                            <tr>
-                                                <td>First Name</td>
-                                                <td><input type="text" class="input-field" placeholder="First name" id="reg_host_fname" required>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Last name</td>
-                                                <td><input type="text" class="input-field" placeholder="Last name" id="reg_host_lname" required>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Email</td>
-                                                <td><input type="email" class="input-field" placeholder="Email Id" id="reg_host_email" required>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Password</td>
-                                                <td><input type="password" class="input-field" placeholder="Enter password" id="reg_host_pws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$" required></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Confirm Password</td>
-                                                <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_host_confpws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$" required></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ABN</td>
-                                                <td><input type="text" class="input-field" placeholder="ABN 11 Number" minlength="11" max="11" pattern="^(\d *?){11}$" id="reg_host_abn" required>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <input type="checkbox" class="check-box" required>I agree to the terms and conditions
-                                        <button type="submit" class="submit-btn" onclick="host_pws_macth()">submit</a>
+                        </div>
+                        <div class="content">
+                            <form id='reg_admin_form' class='input-group-login'>
+                                <div id="host" class="data">
+                                    <table>
+                                        <tr>
+                                            <td>First Name</td>
+                                            <td><input type="text" class="input-field" placeholder="First name" id="reg_host_fname" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Last name</td>
+                                            <td><input type="text" class="input-field" placeholder="Last name" id="reg_host_lname" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td><input type="email" class="input-field" placeholder="Email Id" id="reg_host_email" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Password</td>
+                                            <td><input type="password" class="input-field" placeholder="Enter password" id="reg_host_pws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Confirm Password</td>
+                                            <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_host_confpws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ABN</td>
+                                            <td><input type="text" class="input-field" placeholder="ABN 11 Number" minlength="11" max="11" pattern="^(\d *?){11}$" id="reg_host_abn" required>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <input type="checkbox" class="check-box" required>I agree to the terms and conditions
+                                    <button type="submit" class="submit-btn" onclick="host_pws_macth()">submit</a>
                                         </div>
                                     </form>
                                     <form>
@@ -180,10 +188,10 @@
                                                 <input type="checkbox" class="check-box" required>I agree to the terms and
                                                 conditions
                                                 <button type="submit" value="button" class="submit-btn" onclick="pws_macth()">Submit</button>
-                                    </div>
-                            </div>
-                            </form>
+                                </div>
                         </div>
+                        </form>
+                    </div>
             </div>
             </form>
         </div>

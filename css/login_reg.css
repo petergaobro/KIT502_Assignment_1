@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Hachi+Maru+Pop&family=Monoton&family=Syncopate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background/background_img.jpg);
     background-size: cover;
@@ -49,7 +50,7 @@ body {
     padding: 1rem;
     font-size: 25px;
     position: relative;
-    font-family: 'Boogaloo', cursive;
+    font-family: 'Noto Serif', serif;
 }
 
 .nav_links li a:hover {
@@ -152,6 +153,11 @@ body {
     overflow: hidden;
     background: rgb(237, 237, 241);
     margin-top: 160px;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: #f00;
 }
 
 .button-box {
@@ -208,6 +214,13 @@ body {
     transition: .5s;
 }
 
+.input-admin-login {
+    top: 30px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
 .input-field {
     width: 100%;
     padding: 10px 0;
@@ -215,7 +228,7 @@ body {
     border-left: 0;
     border-top: 0;
     border-right: 0;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid rgb(0, 0, 0);
     outline: none;
     background: transparent;
 }
@@ -248,7 +261,7 @@ span {
 }
 
 #login_form input {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 15;
 }
 
@@ -257,7 +270,7 @@ span {
 }
 
 #reg_form input {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 15;
 }
 
@@ -266,7 +279,7 @@ span {
 }
 
 #admin_log_form input {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 15;
 }
 
@@ -275,7 +288,7 @@ span {
 }
 
 #sys_reg_form input {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 15;
 }
 
@@ -285,7 +298,7 @@ span {
 
 .data {
     display: none;
-    color: aqua;
+    color: #000;
 }
 
 .wrapper {
@@ -296,7 +309,7 @@ span {
 
 .data1 {
     display: none;
-    color: aqua;
+    color: #000;
 }
 
 .content1 {
