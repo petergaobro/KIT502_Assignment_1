@@ -14,14 +14,6 @@ function login() {
     z.style.left = '0px';
 }
 
-
-// var modal = document.getElementById('login-form');
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-
 var a = document.getElementById('admin_log_form');
 var b = document.getElementById('sys_reg_form');
 var c = document.getElementById('switch_btn');

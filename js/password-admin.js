@@ -50,14 +50,6 @@ login_admin_form.addEventListener('submit', (e) => {
     return isvalid;
 })
 
-
-
-
-
-
-
-
-
 function pws_macth() {
     var reg_sys_pws = document.getElementById("reg_sys_pws");
     var reg_sys_conpws = document.getElementById("reg_sys_conpws");

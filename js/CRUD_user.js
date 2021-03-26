@@ -1,10 +1,6 @@
 // ----------------------------------------------------host part---------------------------------
 //  create row
 function create_user() {
-    // get the table by id
-    // create a new row and cells
-    // get value from input text
-    // set the values into row cell's
     var user_table = document.getElementById("user_table");
     if (!valid_user()) {
         var newRow = user_table.insertRow(user_table.length),
@@ -15,7 +11,6 @@ function create_user() {
             cell5 = newRow.insertCell(4),
             cell6 = newRow.insertCell(5),
             cell7 = newRow.insertCell(6),
-            // cell5 = newRow.insertCell(4),
             edit_u_type = document.getElementById("edit_u_type").value,
             edit_u_fname = document.getElementById("edit_u_fname").value,
             edit_u_lname = document.getElementById("edit_u_lname").value,
@@ -23,8 +18,6 @@ function create_user() {
             edit_u_abn = document.getElementById("edit_u_abn").value,
             edit_u_add = document.getElementById("edit_u_add").value,
             edit_u_pn = document.getElementById("edit_u_pn").value;
-        // add_btn = document.getElementById("add").value;
-
         cell1.innerHTML = edit_u_type;
         cell2.innerHTML = edit_u_fname;
         cell3.innerHTML = edit_u_lname;
@@ -39,10 +32,8 @@ function create_user() {
 // --------------------------valid_user-----------------------
 
 function valid_user() {
-    // var email_valid = /@/;
     var email_valid = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var isEmpty = false,
-        // host part
         edit_u_type = document.getElementById("edit_u_type").value,
         edit_u_fname = document.getElementById("edit_u_fname").value,
         edit_u_lname = document.getElementById("edit_u_lname").value,
@@ -50,8 +41,6 @@ function valid_user() {
         edit_u_abn = document.getElementById("edit_u_abn").value,
         edit_u_add = document.getElementById("edit_u_add").value,
         edit_u_pn = document.getElementById("edit_u_pn").value;
-
-
 
     if (edit_u_type == "") {
         alert("Type of user entry Connot Be Empty");
@@ -89,9 +78,7 @@ var temp;
 function select_edit() {
     var user_table = document.getElementById('user_table');
     for (var n = 1; n < user_table.rows.length; n++) {
-        // select the row in host add table
         user_table.rows[n].onclick = function() {
-            // get the seected row index
             temp = this.rowIndex;
             document.getElementById("edit_u_type").value = this.cells[0].innerHTML;
             document.getElementById("edit_u_fname").value = this.cells[1].innerHTML;

@@ -41,7 +41,6 @@ function check_btn() {
             op_index++;
         }
     }
-
     slide();
 }
 
@@ -52,8 +51,6 @@ function optionFunc() {
 
     slide();
 }
-
-
 
 slider.addEventListener('transitionend', () => {
     if (slides[index].id === "first") {
