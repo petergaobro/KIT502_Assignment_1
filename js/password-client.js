@@ -9,8 +9,8 @@ login_form.addEventListener('submit', (e) => {
     e.preventDefault()
     // let messages = []
     if (login_email.value === '' || login_email.value == null) {
-        alert('Name is required');
-        // isvalid = true;
+        alert('Eame is required');
+        isvalid = true;
     }
     else if(!email_format.test(login_email.value)){
         alert('Invalid email format');
@@ -82,7 +82,7 @@ reg_form.addEventListener('submit', (e) => {
 
 
 
-
+// --------register --------
 
 
 

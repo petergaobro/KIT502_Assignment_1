@@ -59,16 +59,14 @@
 
     <!-- search popup window -->
     <div class="login_main_container">
-
         <div class="show_container">
-
             <div class="form-box">
                 <div class='button-box'>
                     <div id='switch_btn'></div>
-                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
-                    <button type='button' onclick='register()' class='toggle-btn_reg'>Register</button>
+                    <button type='button' onclick='admin_login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='admin_register()' class='toggle-btn_reg'>Register</button>
                 </div>
-                <form id='login' class='input-group-login'>
+                <form id='admin_log_form' class='input-group-register'>
                     <div class="wrapper1">
                         <div class="menu1">
                             <select id="name1">
@@ -77,127 +75,143 @@
                             </select>
                         </div>
                         <div class="content1">
-                            <div id="host1" class="data1">
-                                <table>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><input type="email" class="input-field" placeholder="Email" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Enter Password" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABN</td>
-                                        <td><input type="text" class="input-field" placeholder="ABN" required>
-                                    </tr>
-                                </table>
-                                <input type="checkbox" class="check-box">Remember Password
-                                <button type="submit" value="button" class="submit-btn" onclick="go_host_dashboard()">Login<a
-                                        href="../html/dashboard.html>"></a></button>
-                            </div>
+                            <form id='login_host_form' class='input-group-login'>
+                                <div id="host1" class="data1">
+                                    <table>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td><input type="email" class="input-field" placeholder="Email"
+                                                    id="login_admin_hst_emil" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Password</td>
+                                            <td><input type="password" class="input-field" placeholder="Enter Password"
+                                                    id="login_admin_pws" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ABN</td>
+                                            <td><input type="text" class="input-field" placeholder="ABN (11 numbers)"
+                                                    id="login_admin_abn" required>
+                                        </tr>
+                                    </table>
+                                    <input type="checkbox" class="check-box">Remember Password
+                                    <button type="submit" value="button" class="submit-btn">Login</button>
+                                </div>
+                            </form>
                         </div>
-
-
-
-                        <div class="content1">
+                        <form id='login_admin_form' class='input-group-login'>
                             <div id="system1" class="data1">
                                 <table>
                                     <tr>
                                         <td>Email</td>
-                                        <td><input type="email" class="input-field" palceholder="Email" required></td>
+                                        <td><input type="email" class="input-field" palceholder="Email"
+                                                id="login_admin_sys_email" required>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Enter Password" required></td>
+                                        <td><input type="password" class="input-field" placeholder="Enter Password"
+                                                id="login_admin_sys_pws" required>
+                                        </td>
                                     </tr>
-                                    <tr>
                                 </table>
                                 <input type="checkbox" class="check-box">Remember Password
-                                <button type="submit" value="button" class="submit-btn" onclick="go_dashboard()">Login<a
-                                        href="../html/dashboard.html>"></a></button>
+                                <button type="submit" value="button" class="submit-btn">Login</button>
                             </div>
-                        </div>
-                </form>
-                </div>
-                <form id='register' class='input-group-register'>
-                    <div class="wrapper">
-                        <div class="menu">
-                            <select id="name">
-                            <option value="host">host</option>
-                            <option value="manager">System Manager</option>
-                        </select>
-                        </div>
-                        <div class="content">
-                            <div id="host" class="data">
-                                <table>
-                                    <tr>
-                                        <td>First Name</td>
-                                        <td><input type="text" class="input-field" placeholder="First name" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Last name</td>
-                                        <td><input type="text" class="input-field" placeholder="Last name" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><input type="email" class="input-field" placeholder="Email Id" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Enter password" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Confirm Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Confirm password" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABN</td>
-                                        <td><input type="text" class="input-field" placeholder="ABN Number" required></td>
-                                    </tr>
-                                </table>
-                                <input type="checkbox" class="check-box" required>I agree to the terms and conditions
-                                <a href="../html/login_admin.html" class="submit-btn">submit</a>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div id="manager" class="data">
-                                <table>
-                                    <tr>
-                                        <td>First Name</td>
-                                        <td><input type="text" class="input-field" placeholder="First name" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Last name</td>
-                                        <td><input type="text" class="input-field" placeholder="Last name" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><input type="email" class="input-field" placeholder="Email Id" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Enter password" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Confirm Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Confirm password" required></td>
-                                    </tr>
-                                </table>
-                                <input type="checkbox" class="check-box" required>I agree to the terms and conditions
-                                <button type="submit" value="button" class="submit-btn">Submit</button>
-                            </div>
-                        </div>
                     </div>
+                </form>
 
-
-
-
-
-
-
+                        <form id='sys_reg_form' class='input-group-register'>
+                            <div class="wrapper">
+                                <div class="menu">
+                                    <select id="name">
+                                        <option value="host">host</option>
+                                        <option value="manager">System Manager</option>
+                                    </select>
+                                </div>
+                                <div class="content">
+                                    <form id='login_sys_form' class='input-group-login'>
+                                        <div id="host" class="data">
+                                            <table>
+                                                <tr>
+                                                    <td>First Name</td>
+                                                    <td><input type="text" class="input-field" placeholder="First name" id="reg_host_fname" required>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last name</td>
+                                                    <td><input type="text" class="input-field" placeholder="Last name" id="reg_host_lname" required>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td><input type="email" class="input-field" placeholder="Email Id" id="reg_host_email" required>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Password</td>
+                                                    <td><input type="password" class="input-field" placeholder="Enter password" id="reg_host_pws"
+                                                            required></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Confirm Password</td>
+                                                    <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_host_confpws"
+                                                            required></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ABN</td>
+                                                    <td><input type="text" class="input-field" placeholder="ABN Number" id="reg_host_abn" required>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <input type="checkbox" class="check-box" required>I agree to the terms and
+                                            conditions
+                                            <a href="../html/login_admin.html" class="submit-btn">submit</a>
+                                        </div>
+                                    </form>
+                                    <form>
+                                        <div class="content">
+                                            <div id="manager" class="data">
+                                                <table>
+                                                    <tr>
+                                                        <td>First Name</td>
+                                                        <td><input type="text" class="input-field" placeholder="First name" id="reg_sys_fname" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Last name</td>
+                                                        <td><input type="text" class="input-field" placeholder="Last name" id="reg_sys_lname"  required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Email</td>
+                                                        <td><input type="email" class="input-field" placeholder="Email Id" id="reg_sys_email"  required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Password</td>
+                                                        <td><input type="password" class="input-field" placeholder="Enter password" id="reg_sys_pws" 
+                                                                required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Confirm Password</td>
+                                                        <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_sys_conpws" 
+                                                                required>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <input type="checkbox" class="check-box" required>I agree to the terms and
+                                                conditions
+                                                <button type="submit" value="button" class="submit-btn">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
             </div>
-        </div>
+        </form>
+    </div>
+    </div>
 
 
 
@@ -206,38 +220,21 @@
 
 
 
-
-        <footer>
-            <p>Copyright &copy; , KIT_502 Assignment_1</p>
-        </footer>
-
-
-        <!-- <script src="../js/popup_window.js"></script> -->
-        <script src="../js/log_reg.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <footer>
+        <p>Copyright &copy; , KIT_502 Assignment_1</p>
+    </footer>
 
 
+    <!-- <script src="../js/popup_window.js"></script> -->
+    <script src="../js/log_reg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/password-admin.js"></script>
+    <script src="../js/option.js"></script>
 
 
-        <script>
-            $(Document).ready(function() {
-                $("#name").on('change', function() {
-                    $(".data").hide();
-                    $("#" + $(this).val()).fadeIn();
-                }).change();
-            });
-        </script>
-        <script>
-            $(Document).ready(function() {
-                $("#name1").on('change', function() {
-                    $(".data1").hide();
-                    $("#" + $(this).val()).fadeIn();
-                }).change();
-            });
-        </script>
 
 
-        <script src="../js/admin_pop.js"></script>
+    <script src="../js/admin_pop.js"></script>
 
 </body>
 

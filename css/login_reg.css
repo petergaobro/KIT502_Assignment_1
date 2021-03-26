@@ -299,6 +299,24 @@ span {
     font-size: 15;
 }
 
+#admin_log_form {
+    left: 50px;
+}
+
+#admin_log_form input {
+    color: white;
+    font-size: 15;
+}
+
+#sys_reg_form {
+    left: 450px;
+}
+
+#sys_reg_form input {
+    color: white;
+    font-size: 15;
+}
+
 .content {
     margin: 15px 0;
 }
