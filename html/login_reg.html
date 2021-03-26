@@ -50,6 +50,7 @@
                             <li><a href="../html/login_reg.html">Login</a></li>
                             <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li>
                             <li><a href="../html/client_review.html">Review</a></li>
+                            <li><a href="../html/rate.html">Rate</a></li>
                         </ul>
                     </div>
                     <li><a class="login_sign" href="./login_reg.html">Login</a></li>
@@ -70,25 +71,28 @@
 
             <div class="form-box">
                 <div class='button-box'>
-                    <div id='btn'></div>
+                    <div id='switch_btn'></div>
                     <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
                     <button type='button' onclick='register()' class='toggle-btn_reg'>Register</button>
                 </div>
-                <form id='login' class='input-group-login'>
-                    <input type="text" class="input-field" placeholder="email id"></b>
-                    <input type='text' class='input-field' placeholder='Email Id' required>
-                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                <form id='login_form' class='input-group-login'>
+                    <input type="email" class="input-field" placeholder="email id" id="login_email" required></b>
+                    <input type='text' class='input-field' placeholder='password' id="login_password" required>
+                    <input type='text' class='input-field' placeholder='Confirm Password' id="login_confirmpassword" required>
                     <input type='checkbox' class='check-box'>Remember Password
                     <button type='submit' class='submit-btn'>Log in</button>
                 </form>
-                <form id='register' class='input-group-register'>
-                    <input type="text" class="input-field" placeholder="*First Name" required>
-                    <input type="text" class="input-field" placeholder="*Last Name" required>
-                    <input type="age" class="input-field" placeholder="age" required>
-                    <input type="text" class="input-field" placeholder="First Name" required>
-                    <input type='text' class='input-field' placeholder='*Email Id' required>
-                    <input type='password' class='input-field' placeholder='*Enter Password' required>
-                    <input type="password" class="input-field" placeholder="*confirm password" required>
+                <form id='reg_form' class='input-group-register'>
+                    <input type="text" class="input-field" placeholder="* First Name" id="reg_fname" required>
+                    <input type="text" class="input-field" placeholder="* Last Name" id="reg_lname" required>
+                    <input type='email' class='input-field' placeholder='* Email Address ' id="reg_email" required>
+                    <input type='password' class='input-field' placeholder='*Enter Password' id="reg_pws" required>
+                    <input type="password" class="input-field" placeholder="*confirm password" id="reg_cpws" required>
+                    <input type="text" class="input-field" placeholder="* Phone Number" id="reg_ph_no" required>
+                    <input type="text" class="input-field" placeholder="*Location" id="reg_loc" required>
+                    <p>Box with * must be filled</p>
+                    <!-- <input type="" class="input-field" placeholder="First Name" required> -->
+                    <!-- <p>You must fill this form with "*"</p> -->
                     <input type="checkbox" class="check-box" required>I agree to the terms and conditions
                     <button type='submit' class='submit-btn'>Submit</button>
             </div>
@@ -116,6 +120,7 @@
     <!-- <script src="../js/popup_window.js"></script> -->
     <script src="../js/log_reg.js"></script>
     <script src="../js/admin_pop.js"></script>
+    <script src="../js/password-client.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <!-- <script src="../js/option.js"></script> -->
 
@@ -127,7 +132,37 @@
             }).change();
         });
     </script> -->
+<!-- <script>
+const name = document.getElementById('name')
+const password = document.getElementById('password')
+const form = document.getElementById('form')
+const errorElement = document.getElementById('error')
 
+form.addEventListener('submit', (e) => {
+  let messages = []
+  if (name.value === '' || name.value == null) {
+    messages.push('Name is required')
+  }
+
+  if (password.value.length <= 6) {
+    messages.push('Password must be longer than 6 characters')
+  }
+
+  if (password.value.length >= 20) {
+    messages.push('Password must be less than 20 characters')
+  }
+
+  if (password.value === 'password') {
+    messages.push('Password cannot be password')
+  }
+
+  if (messages.length > 0) {
+    e.preventDefault()
+    errorElement.innerText = messages.join(', ')
+  }
+})
+
+</script> -->
 
 
 

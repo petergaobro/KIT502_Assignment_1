@@ -3,10 +3,6 @@
 var order_table = document.getElementById("order_table");
 // ------------------------------create Row---------------------------
 function create_order() {
-    // get the table by id
-    // create a new row and cells
-    // get value from input text
-    // set the values into row cell's
     if (!validation()) {
         var newRow = order_table.insertRow(order_table.length),
             // insert the cell content into the new row

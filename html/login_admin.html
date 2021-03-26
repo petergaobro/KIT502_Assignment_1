@@ -5,26 +5,13 @@
     <meta charset="UTF-8">
 
     <title>Admin Login</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../css/home.css"> -->
     <link rel="stylesheet" type="text/css" href="../css/popup_window.css">
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
-    <!-- <script src="https://kit.fontawesome.com/a81368914c.js"></script> -->
 </head>
 
 <body>
-
-    <!---------------part 1-------------------->
-    <!-- <div class="img_area"></div> -->
-    <!-- <div class="covid_div">
-        <aside class="covid_notice">
-            <a class="covid_news" href="https://www.australia.gov.au/">
-                <span class="covid_words">Get the latest on our COVID-19 response</span>
-            </a>
-        </aside>
-    </div> -->
 
 
     <nav class="nav_bar">
@@ -47,8 +34,6 @@
                 <li><a class="active_nav" href="">Experiences</a></li>
                 <li><a class="active_nav" href="">Oline Experiences</a></li>
                 <li><a class="login_sign" href="./login_reg.html">Login</a></li>
-                <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
-                <!-- <a href="" class="search_info" id="open">SEARCH NOW</a> -->
             </ul>
         </div>
         <script src="../js/toggle_bar.js" defer></script>
@@ -59,16 +44,14 @@
 
     <!-- search popup window -->
     <div class="login_main_container">
-
         <div class="show_container">
-
             <div class="form-box">
                 <div class='button-box'>
-                    <div id='btn'></div>
-                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
-                    <button type='button' onclick='register()' class='toggle-btn_reg'>Register</button>
+                    <div id='switch_btn'></div>
+                    <button type='button' onclick='admin_login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='admin_register()' class='toggle-btn_reg'>Register</button>
                 </div>
-                <form id='login' class='input-group-login'>
+                <form id='admin_log_form' class='input-group-register'>
                     <div class="wrapper1">
                         <div class="menu1">
                             <select id="name1">
@@ -77,122 +60,141 @@
                             </select>
                         </div>
                         <div class="content1">
-                            <div id="host1" class="data1">
-                                <table>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><input type="email" class="input-field" placeholder="Email" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Enter Password" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>ABN</td>
-                                        <td><input type="text" class="input-field" placeholder="ABN" required>
-                                    </tr>
-                                </table>
-                                <input type="checkbox" class="check-box">Remember Password
-                                <button type="submit" value="button" class="submit-btn" onclick="go_host_dashboard()">Login<a
-                                        href="../html/dashboard.html>"></a></button>
-                            </div>
+                            <form id='login_host_form' class='input-group-login'>
+                                <div id="host1" class="data1">
+                                    <table>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td><input type="email" class="input-field" placeholder="Email" id="login_admin_hst_emil" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Password</td>
+                                            <td><input type="password" class="input-field" placeholder="Enter Password" id="login_admin_pws" required></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ABN</td>
+                                            <td><input type="text" class="input-field" placeholder="ABN (11 numbers)" id="login_admin_abn" required>
+                                        </tr>
+                                    </table>
+                                    <input type="checkbox" class="check-box">Remember Password
+                                    <button type="submit" value="button" class="submit-btn">Login</button>
+                                </div>
+                            </form>
                         </div>
-
-
-
-                        <div class="content1">
+                        <form id='login_admin_form' class='input-group-login'>
                             <div id="system1" class="data1">
                                 <table>
                                     <tr>
                                         <td>Email</td>
-                                        <td><input type="email" class="input-field" palceholder="Email" required></td>
+                                        <td><input type="email" class="input-field" palceholder="Email" id="login_admin_sys_email" required>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Password</td>
-                                        <td><input type="password" class="input-field" placeholder="Enter Password" required></td>
+                                        <td><input type="password" class="input-field" placeholder="Enter Password" id="login_admin_sys_pws" required>
+                                        </td>
                                     </tr>
-                                    <tr>
                                 </table>
                                 <input type="checkbox" class="check-box">Remember Password
-                                <button type="submit" value="button" class="submit-btn" onclick="go_dashboard()">Login<a
-                                        href="../html/dashboard.html>"></a></button>
+                                <button type="submit" value="button" class="submit-btn">Login</button>
                             </div>
-                        </div>
                     </div>
-                </form>
+                    </form>
+                    <form id='sys_reg_form' class='input-group-register'>
+                        <div class="wrapper">
+                            <div class="menu">
+                                <select id="name">
+                                        <option value="host">host</option>
+                                        <option value="manager">System Manager</option>
+                                    </select>
+                            </div>
+                            <div class="content">
+                                <form id='reg_admin_form' class='input-group-login'>
+                                    <div id="host" class="data">
+                                        <table>
+                                            <tr>
+                                                <td>First Name</td>
+                                                <td><input type="text" class="input-field" placeholder="First name" id="reg_host_fname" required>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Last name</td>
+                                                <td><input type="text" class="input-field" placeholder="Last name" id="reg_host_lname" required>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td><input type="email" class="input-field" placeholder="Email Id" id="reg_host_email" required>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Password</td>
+                                                <td><input type="password" class="input-field" placeholder="Enter password" id="reg_host_pws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Confirm Password</td>
+                                                <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_host_confpws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ABN</td>
+                                                <td><input type="text" class="input-field" placeholder="ABN 11 Number" minlength="11" max="11" pattern="^(\d *?){11}$" id="reg_host_abn" required>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <input type="checkbox" class="check-box" required>I agree to the terms and conditions
+                                        <button type="submit" class="submit-btn" onclick="host_pws_macth()">submit</a>
+                                        </div>
+                                    </form>
+                                    <form>
+                                        <div class="content">
+                                            <div id="manager" class="data">
+                                                <table>
+                                                    <tr>
+                                                        <td>First Name</td>
+                                                        <td><input type="text" class="input-field" placeholder="First name" id="reg_sys_fname" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Last name</td>
+                                                        <td><input type="text" class="input-field" placeholder="Last name" id="reg_sys_lname"  required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Email</td>
+                                                        <td><input type="email" class="input-field" placeholder="Email Id" id="reg_sys_email" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Password</td>
+                                                        <td><input type="password" class="input-field" placeholder="Enter password" id="reg_sys_pws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$"
+                                                                required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Confirm Password</td>
+                                                        <td><input type="password" class="input-field" placeholder="Confirm password" id="reg_sys_conpws" minlength="6" maxlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{6,12}$"
+                                                                required>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <input type="checkbox" class="check-box" required>I agree to the terms and
+                                                conditions
+                                                <button type="submit" value="button" class="submit-btn" onclick="pws_macth()">Submit</button>
+                                    </div>
+                            </div>
+                            </form>
+                        </div>
             </div>
-            <form id='register' class='input-group-register'>
-                <div class="wrapper">
-                    <div class="menu">
-                        <select id="name">
-                            <option value="host">host</option>
-                            <option value="manager">System Manager</option>
-                        </select>
-                    </div>
-                    <div class="content">
-                        <div id="host" class="data">
-                            <table>
-                                <tr>
-                                    <td>First Name</td>
-                                    <td><input type="text" class="input-field" placeholder="First name" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Last name</td>
-                                    <td><input type="text" class="input-field" placeholder="Last name" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Email</td>
-                                    <td><input type="email" class="input-field" placeholder="Email Id" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Password</td>
-                                    <td><input type="password" class="input-field" placeholder="Enter password" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Confirm Password</td>
-                                    <td><input type="password" class="input-field" placeholder="Confirm password" required></td>
-                                </tr>
-                                <tr>
-                                    <td>ABN</td>
-                                    <td><input type="text" class="input-field" placeholder="ABN Number" required></td>
-                                </tr>
-                            </table>
-                            <input type="checkbox" class="check-box" required>I agree to the terms and conditions
-                            <a href="../html/login_admin.html" class="submit-btn">submit</a>
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div id="manager" class="data">
-                            <table>
-                                <tr>
-                                    <td>First Name</td>
-                                    <td><input type="text" class="input-field" placeholder="First name" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Last name</td>
-                                    <td><input type="text" class="input-field" placeholder="Last name" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Email</td>
-                                    <td><input type="email" class="input-field" placeholder="Email Id" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Password</td>
-                                    <td><input type="password" class="input-field" placeholder="Enter password" required></td>
-                                </tr>
-                                <tr>
-                                    <td>Confirm Password</td>
-                                    <td><input type="password" class="input-field" placeholder="Confirm password" required></td>
-                                </tr>
-                            </table>
-                            <input type="checkbox" class="check-box" required>I agree to the terms and conditions
-                            <button type="submit" value="button" class="submit-btn">Submit</button>
-                        </div>
-                    </div>
-                </div>
             </form>
         </div>
     </div>
+
+
+
+
+
+
+
 
     <footer>
         <p>Copyright &copy; , KIT_502 Assignment_1</p>
@@ -202,26 +204,10 @@
     <!-- <script src="../js/popup_window.js"></script> -->
     <script src="../js/log_reg.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/password-admin.js"></script>
+    <script src="../js/option.js"></script>
 
 
-
-
-    <script>
-        $(Document).ready(function() {
-            $("#name").on('change', function() {
-                $(".data").hide();
-                $("#" + $(this).val()).fadeIn();
-            }).change();
-        });
-    </script>
-    <script>
-        $(Document).ready(function() {
-            $("#name1").on('change', function() {
-                $(".data1").hide();
-                $("#" + $(this).val()).fadeIn();
-            }).change();
-        });
-    </script>
 
 
     <script src="../js/admin_pop.js"></script>
