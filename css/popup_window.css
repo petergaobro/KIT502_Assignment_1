@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 .search_container {
     position: absolute;
-    /* background: rgba(0, 0, 0, 0.9); */
     background: grey;
     width: 100%;
     height: 100%;
@@ -13,8 +12,6 @@
     pointer-events: none;
     backdrop-filter: blur(50px);
     background: rgba(56, 52, 52, 0.5);
-    /* transition: opacity 0.4s;  */
-    /* text-align: center; */
 }
 
 .search_container.show {
@@ -53,15 +50,12 @@ input[type=number] {
 .booking-form-box {
     max-width: 500px;
     height: 500px;
-    /* max-height: 500px; */
-    /* border: 1px solid #ced4da; */
     margin-top: 20px;
-    background: wheat;
+    background: rgb(39, 37, 34);
 }
 
 .booking-form {
     border-radius: 5px;
-    /* background-color: #f2f2f2; */
     padding: 20px;
 }
 
